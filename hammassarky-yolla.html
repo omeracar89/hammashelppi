@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hammassärky yöllä – mitä tehdä? | Hammashelppi</title>
+<meta name="description" content="Hammassärky iskee yöllä – mitä teet? Hammaslääkäri kertoo milloin on kiire päivystykseen ja miten saat helpotusta kotona. Kysy myös chatissa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:      #2E86C1;
+    --blue-dark: #1A6FA8;
+    --blue-light:#EAF4FB;
+    --blue-mid:  #BADAF0;
+    --white:     #FFFFFF;
+    --bg:        #F4F8FF;
+    --ink:       #1A2233;
+    --ink-soft:  #5A6478;
+    --accent:    #00B894;
+    --rule:      #D6E4F7;
+    --radius:    14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--rule);}
+  .nav-logo{font-family:'DM Serif Display',serif;font-size:20px;color:var(--blue);text-decoration:none;}
+  .nav-links{display:flex;gap:24px;list-style:none;align-items:center;}
+  .nav-links a{text-decoration:none;color:var(--ink-soft);font-size:14px;transition:color .2s;}
+  .nav-links a:hover{color:var(--blue);}
+  .nav-cta{background:var(--blue)!important;color:var(--white)!important;padding:9px 20px!important;border-radius:100px!important;font-weight:500!important;}
+  .nav-cta:hover{background:var(--blue-dark)!important;color:var(--white)!important;}
+
+  /* ARTICLE LAYOUT */
+  .article-wrap{max-width:720px;margin:0 auto;padding:100px 24px 80px;}
+
+  /* BREADCRUMB */
+  .breadcrumb{font-size:13px;color:var(--ink-soft);margin-bottom:32px;display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:var(--blue);text-decoration:none;}
+  .breadcrumb a:hover{text-decoration:underline;}
+
+  /* ARTICLE HEADER */
+  .article-tag{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:500;padding:4px 12px;border-radius:100px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;border:1px solid var(--blue-mid);}
+  h1{font-family:'DM Serif Display',serif;font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-1px;color:var(--ink);margin-bottom:20px;}
+  .article-meta{font-size:14px;color:var(--ink-soft);margin-bottom:32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .meta-author{display:flex;align-items:center;gap:8px;}
+  .author-avatar{width:32px;height:32px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:white;font-size:12px;font-weight:600;}
+  .article-intro{font-size:19px;color:var(--ink-soft);font-weight:300;line-height:1.7;border-left:3px solid var(--blue);padding-left:20px;margin-bottom:40px;}
+
+  /* ARTICLE BODY */
+  .article-body h2{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px;color:var(--ink);margin:44px 0 16px;}
+  .article-body h3{font-size:18px;font-weight:500;color:var(--ink);margin:28px 0 12px;}
+  .article-body p{font-size:16px;color:var(--ink);line-height:1.8;margin-bottom:20px;}
+  .article-body ul,.article-body ol{margin:0 0 20px 24px;}
+  .article-body li{font-size:16px;line-height:1.8;margin-bottom:8px;color:var(--ink);}
+  .article-body strong{font-weight:500;color:var(--ink);}
+
+  /* ALERT BOXES */
+  .alert{border-radius:var(--radius);padding:20px 24px;margin:28px 0;display:flex;gap:16px;align-items:flex-start;}
+  .alert-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+  .alert-body{font-size:15px;line-height:1.7;}
+  .alert-body strong{display:block;font-size:16px;margin-bottom:4px;}
+  .alert-red{background:#FEF2F2;border:1px solid #FECACA;}
+  .alert-blue{background:var(--blue-light);border:1px solid var(--blue-mid);}
+  .alert-green{background:#F0FDF4;border:1px solid #BBF7D0;}
+
+  /* TABLE */
+  .symptom-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+  .symptom-table th{background:var(--blue);color:white;padding:12px 16px;text-align:left;font-weight:500;}
+  .symptom-table td{padding:12px 16px;border-bottom:1px solid var(--rule);}
+  .symptom-table tr:nth-child(even) td{background:var(--bg);}
+  .symptom-table tr:hover td{background:var(--blue-light);}
+  .tag-kiire{background:#FEE2E2;color:#DC2626;font-size:12px;font-weight:500;padding:2px 8px;border-radius:100px;}
+  .tag-odota{background:#F0FDF4;color:#16A34A;font-size:12px;font-weight:500;padding:2px 8px;border-radius:100px;}
+
+  /* CTA BOX */
+  .cta-box{background:var(--blue);border-radius:20px;padding:36px;color:white;margin:44px 0;text-align:center;}
+  .cta-box h3{font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:12px;color:white;}
+  .cta-box p{font-size:15px;opacity:.85;margin-bottom:24px;line-height:1.65;}
+  .cta-box-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+  .btn-white{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);padding:13px 26px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 16px rgba(0,0,0,.12);}
+  .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.18);}
+  .btn-ghost-white{display:inline-flex;align-items:center;gap:8px;color:white;padding:13px 26px;border-radius:100px;font-size:15px;font-weight:400;text-decoration:none;border:1px solid rgba(255,255,255,.35);transition:background .2s;}
+  .btn-ghost-white:hover{background:rgba(255,255,255,.12);}
+  .cta-price{font-size:13px;opacity:.6;margin-top:14px;}
+
+  /* INLINE CTA (mid-article) */
+  .inline-cta{background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:var(--radius);padding:24px;margin:32px 0;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+  .inline-cta-text{flex:1;min-width:200px;}
+  .inline-cta-text strong{display:block;font-size:16px;margin-bottom:4px;color:var(--ink);}
+  .inline-cta-text span{font-size:14px;color:var(--ink-soft);}
+  .btn-blue{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:white;padding:11px 22px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;transition:background .2s;}
+  .btn-blue:hover{background:var(--blue-dark);}
+
+  /* AUTHOR BOX */
+  .author-box{background:var(--bg);border:1px solid var(--rule);border-radius:var(--radius);padding:28px;margin-top:48px;display:flex;gap:20px;align-items:flex-start;}
+  .author-img{width:60px;height:60px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:white;font-family:'DM Serif Display',serif;font-size:22px;flex-shrink:0;}
+  .author-name{font-weight:500;font-size:16px;margin-bottom:4px;}
+  .author-title{font-size:13px;color:var(--blue);margin-bottom:8px;}
+  .author-bio{font-size:14px;color:var(--ink-soft);line-height:1.65;}
+
+  /* RELATED */
+  .related{margin-top:48px;padding-top:40px;border-top:1px solid var(--rule);}
+  .related h3{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:20px;}
+  .related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .related-card{background:var(--bg);border:1px solid var(--rule);border-radius:var(--radius);padding:20px;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;display:block;}
+  .related-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(46,134,193,.1);}
+  .related-tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--blue);font-weight:500;margin-bottom:8px;}
+  .related-title{font-family:'DM Serif Display',serif;font-size:16px;line-height:1.35;color:var(--ink);}
+
+  /* FOOTER */
+  footer{background:var(--ink);padding:24px 48px;display:flex;justify-content:space-between;align-items:center;margin-top:80px;}
+  .footer-logo{font-family:'DM Serif Display',serif;font-size:17px;color:rgba(255,255,255,.5);}
+  .footer-links{display:flex;gap:20px;list-style:none;}
+  .footer-links a{font-size:13px;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+  .footer-links a:hover{color:rgba(255,255,255,.8);}
+
+  @media(max-width:700px){
+    nav{padding:14px 20px;}
+    .nav-links li:not(:last-child){display:none;}
+    .article-wrap{padding:80px 20px 60px;}
+    .related-grid{grid-template-columns:1fr;}
+    footer{flex-direction:column;gap:16px;padding:20px;text-align:center;}
+    .cta-box{padding:28px 20px;}
+    .author-box{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Hammashelppi</a>
+  <ul class="nav-links">
+    <li><a href="/#miten">Miten toimii</a></li>
+    <li><a href="/#hinnoittelu">Hinta</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+    <li><a href="/#lataa" class="nav-cta">Lataa sovellus</a></li>
+  </ul>
+</nav>
+
+<div class="article-wrap">
+
+  <div class="breadcrumb">
+    <a href="/">Etusivu</a>
+    <span>›</span>
+    <a href="/blogi">Blogi</a>
+    <span>›</span>
+    <span>Hammassärky yöllä</span>
+  </div>
+
+  <span class="article-tag">Kipu &amp; Särky</span>
+
+  <h1>Hammassärky yöllä – mitä tehdä ja milloin on kiire?</h1>
+
+  <div class="article-meta">
+    <div class="meta-author">
+      <div class="author-avatar">ÖA</div>
+      <span>Kirjoittanut <strong>Ömer Acar</strong>, hammaslääkäri</span>
+    </div>
+    <span>·</span>
+    <span>Lukuaika noin 5 min</span>
+  </div>
+
+  <p class="article-intro">Hammassärky yöllä on yksi ikävimmistä kokemuksista — kipu herättää, nukkuminen on mahdotonta ja hammaslääkäri ei ole auki. Hammaslääkärinä kerron, milloin tilanne vaatii välitöntä toimintaa ja milloin voit odottaa aamuun.</p>
+
+  <div class="article-body">
+
+    <h2>Miksi hammassärky pahenee yöllä?</h2>
+    <p>Tämä on yksi yleisimmistä kysymyksistä, joita potilaat minulle esittävät. Syy on fysiologinen: maatessa verenpaine hammasalueella nousee, mikä lisää tulehtuneen kudoksen painetta ja vahvistaa kipusignaalia. Samaan aikaan päiväaikainen hälinä on poissa, joten aivot rekisteröivät kivun voimakkaampana.</p>
+    <p>Yleisimmät yöllisen hammassäryn syyt ovat hampaan tulehdus tai paise, karies joka on edennyt hammasytimeen, viisaudenhampaan puhkeaminen ja hampaiden narskuttelu (bruksismi).</p>
+
+    <div class="alert alert-red">
+      <span class="alert-icon">🚨</span>
+      <div class="alert-body">
+        <strong>Mene päivystykseen heti, jos:</strong>
+        Kasvoissa tai kaulalla on turvotusta · Sinulla on kuumetta yli 38°C · Nieleminen tai hengittäminen on vaikeutunut · Kipu on sietämätön eikä kipulääke auta lainkaan
+      </div>
+    </div>
+
+    <h2>Onko tilanne kiireellinen? Tarkista oireesi</h2>
+    <p>Kaikki hammassäryt eivät vaadi välitöntä päivystyskäyntiä. Tässä nopea taulukko oireiden arviointiin:</p>
+
+    <table class="symptom-table">
+      <tr>
+        <th>Oire</th>
+        <th>Arvio</th>
+      </tr>
+      <tr>
+        <td>Kasvot tai kaula turpovat</td>
+        <td><span class="tag-kiire">Päivystykseen heti</span></td>
+      </tr>
+      <tr>
+        <td>Kuume yli 38°C</td>
+        <td><span class="tag-kiire">Päivystykseen heti</span></td>
+      </tr>
+      <tr>
+        <td>Nieleminen vaikeutuu</td>
+        <td><span class="tag-kiire">Päivystykseen heti</span></td>
+      </tr>
+      <tr>
+        <td>Kova jomotus, ei turvotusta</td>
+        <td><span class="tag-odota">Voi odottaa aamuun</span></td>
+      </tr>
+      <tr>
+        <td>Lohjennut hammas, ei kipua</td>
+        <td><span class="tag-odota">Voi odottaa aamuun</span></td>
+      </tr>
+      <tr>
+        <td>Vihlontaa kylmälle/kuumalle</td>
+        <td><span class="tag-odota">Voi odottaa aamuun</span></td>
+      </tr>
+      <tr>
+        <td>Epäselvä kipu, ei muita oireita</td>
+        <td><span class="tag-odota">Kysy ensin chatissa</span></td>
+      </tr>
+    </table>
+
+    <div class="inline-cta">
+      <div class="inline-cta-text">
+        <strong>Epävarma oikeasta toimintatavasta?</strong>
+        <span>Kysy hammaslääkäriltä chatissa — saat arvion muutamassa tunnissa, joskus heti.</span>
+      </div>
+      <a href="/#lataa" class="btn-blue">Kysy chatissa →</a>
+    </div>
+
+    <h2>Mitä voit tehdä kotona yön yli?</h2>
+    <p>Jos tilanne ei vaadi välitöntä päivystyskäyntiä, nämä keinot auttavat selviämään yön yli:</p>
+
+    <h3>1. Kipulääke oikein</h3>
+    <p>Tehokkain kotikonstekini on yhdistää ibuprofeiini (esim. Burana) ja parasetamoli (esim. Panadol). Niitä voi ottaa samaan aikaan, koska ne vaikuttavat eri mekanismeilla. Ibuprofeiinia 400 mg ja parasetamolia 1000 mg. Toista aikaisintaan 6 tunnin kuluttua. <strong>Huom: älä ylitä vuorokausiannoksia, ja varmista ettei sinulla ole vasta-aiheita kummallekaan lääkkeelle.</strong></p>
+
+    <h3>2. Kohoasento nukkuessa</h3>
+    <p>Nosta pääpuolta lisätyynyillä. Kohoasento vähentää verenpainetta hammasalueella ja helpottaa usein kipua merkittävästi.</p>
+
+    <h3>3. Kylmäpakkaus</h3>
+    <p>Paina pyyhkeeseen käärittyä kylmäpakkausta tai jääpussia poskea vasten enintään 15–20 minuuttia kerrallaan. Kylmä supistaa verisuonia ja lievittää tulehdusta.</p>
+
+    <h3>4. Vältä näitä</h3>
+    <p>Älä paina lämpöä kipukohtaan — se pahentaa tulehdusta. Älä myöskään sipaile alkoholia hampaalle, vaikka mummon neuvo niin kuuluisikin — se ei poista tulehdusta ja voi ärsyttää kudosta.</p>
+
+    <div class="alert alert-blue">
+      <span class="alert-icon">💡</span>
+      <div class="alert-body">
+        <strong>Hammaslääkärin vinkki:</strong>
+        Neilikkasöljy (eugenoli) on ainoa kotikeino, jolla on oikeasti tieteellistä näyttöä hammassäryn lievittämisessä. Sivele pieni määrä pumpulipuikolla suoraan särkevään kohtaan. Löytyy apteekista.
+      </div>
+    </div>
+
+    <h2>Milloin hammaslääkäriin seuraavana aamuna?</h2>
+    <p>Jos särky on helpottanut yön yli, älä silti jätä käyntiä väliin. Hammassärky kertoo aina jostakin, joka vaatii hoitoa — kipu vain kertoo siitä ääneen. Hoitamaton tulehdus voi edetä vakavaksi paisteeksi, joka vaatii leikkauksen.</p>
+    <p>Soita hammaslääkärille heti aamulla ja mainitse, että kyseessä on kipuoire — saat todennäköisesti ajan samana tai seuraavana päivänä.</p>
+
+    <h2>Entä jos hammaslääkäriin ei pääse nopeasti?</h2>
+    <p>Tämä on Suomessa valitettavan yleinen ongelma. Julkiselle puolelle jonot voivat olla viikkoja ja yksityiselle ajan saaminen seuraavalle päivälle ei aina onnistu.</p>
+    <p>Tässä tilanteessa etäkonsultaatio on järkevä ensiaskel — mutta ei pelkän googlettelun korvike. Kyse on oikeasta hammaslääkärin arviosta, joka perustuu juuri sinun tilanteeseesi.</p>
+
+    <h2>Miksi kuvakonsultaatio on parempi kuin oma arvaus?</h2>
+    <p>Hammassäryn syytä on lähes mahdotonta arvioida itse pelkkien oireiden perusteella. Sama tunne — jomottava kipu — voi johtua karieksesta, hampaan ytimen tulehduksesta, paisteesta tai jopa poskiontelotulehduksesta. Hoito on jokaisessa tapauksessa täysin erilainen.</p>
+    <p>Kun lähetät kuvan särkevästä alueesta hammaslääkärille chatissa, hän näkee konkreettisesti tilanteesi:</p>
+    <ul>
+      <li>Onko ikenessä turvotusta tai punoitusta, joka viittaa paisteeseen</li>
+      <li>Näkyykö hampaassa selkeitä vaurioita, lohkeamia tai kariesta</li>
+      <li>Miltä ympäröivä kudos näyttää — onko merkkejä leviävästä tulehduksesta</li>
+    </ul>
+    <p>Yhdistettynä oirekuvaukseen — missä kohtaa kipua tuntuu, pahentuuko lämmölle vai kylmälle, onko kuumetta — hammaslääkäri pystyy antamaan sinulle <strong>henkilökohtaisen arvion juuri sinun tilanteestasi</strong>, ei yleistä neuvoa netistä.</p>
+
+    <div class="alert alert-green">
+      <span class="alert-icon">✅</span>
+      <div class="alert-body">
+        <strong>Mitä saat kuvakonsultaatiosta:</strong>
+        Selkeä vastaus siihen, onko tilanne kiireellinen · Tieto siitä, tarvitsetko päivystyskäynnin vai voitko odottaa · Hoito-ohjeet juuri sinun oireisiisi · Tarvittaessa e-resepti ilman erillistä käyntiä
+      </div>
+    </div>
+
+    <p>Moni asiakas on kertonut, että yksi chat-viesti selvitti tilanteen, johon he muuten olisivat hakeutuneet päivystykseen — tai jättäneet hoitamatta liian pitkäksi aikaa. Kumpikaan ei ole hyvä vaihtoehto.</p>
+
+    <h2>Entä kun päivystykseen ei yksinkertaisesti pääse?</h2>
+    <p>Suositukseni on aina sama: jos tilanne on vakava, hae hoitoa. Mutta todellisuus on, että päivystykseen pääseminen ei aina ole mahdollista — vaikka haluaisikin.</p>
+    <p>Tunnistan nämä tilanteet vastaanotollani viikoittain:</p>
+    <ul>
+      <li><strong>Matkalla</strong> — olet toisella paikkakunnalla, ulkomailla tai erämaassa. Lähin päivystys on tuntien ajomatka.</li>
+      <li><strong>Pitkä juhlapyhä</strong> — hammas alkaa särkeä perjantai-iltana ja seuraava mahdollinen aika on maanantaina.</li>
+      <li><strong>Harvaan asuttu alue</strong> — päivystyspalvelut ovat kaukana eikä omaa autoa ole.</li>
+      <li><strong>Lapsiperhe tai muu este</strong> — et pysty lähtemään kotoa, mutta tilanne huolettaa.</li>
+    </ul>
+    <p>Näissä tilanteissa etäkonsultaatio ei ole vaihtoehto päivystykselle — se on ainoa realistinen tapa saada ammattiarvio tilanteestasi sillä hetkellä.</p>
+
+    <div class="alert alert-blue">
+      <span class="alert-icon">🦷</span>
+      <div class="alert-body">
+        <strong>Mitä etäkonsultaatio mahdollistaa silloin kun päivystykseen ei pääse:</strong>
+        Hammaslääkäri arvioi kuvien perusteella, onko kyseessä akuutti infektio vai kivulias mutta odottava tilanne · Jos tulehdus vaatii antibioottia, voimme kirjoittaa reseptin suoraan chatissa — näin hoito alkaa jo samana päivänä · Saat selkeät ohjeet miten toimia juuri sinun tilanteessasi siihen asti kun pääset vastaanotolle
+      </div>
+    </div>
+
+    <p>Tämä on se tilanne, jossa Hammashelppi on tehty. Et jää yksin arvaustesi kanssa, etkä joudu tekemään mahdottomia päätöksiä ilman tietoa siitä, kuinka vakavasta tilanteesta on kyse.</p>
+
+    <div class="cta-box">
+      <h3>Hammas särkyy nyt?</h3>
+      <p>Kysy hammaslääkäriltä chatissa. Saat arvion tilanteestasi yleensä parin tunnin sisällä — joskus heti. Tarvittaessa kirjoitamme reseptin suoraan chatissa.</p>
+      <div class="cta-box-actions">
+        <a href="/#lataa" class="btn-white">Lataa Hammashelppi ilmaiseksi →</a>
+      </div>
+      <p class="cta-price">Alkaen 25 € · 100% tyytyväisyystakuu · Chat auki 24/7</p>
+    </div>
+
+    <h2>Yhteenveto</h2>
+    <p>Hammassärky yöllä on epämiellyttävä mutta yleinen vaiva. Muista nämä pääkohdat:</p>
+    <ul>
+      <li><strong>Turvotus kasvoissa, kuume tai nielemisvaikeus</strong> → päivystykseen heti</li>
+      <li><strong>Kova jomotus ilman muita oireita</strong> → kipulääke + kohoasento + odota aamuun</li>
+      <li><strong>Epäselvä tilanne</strong> → kysy hammaslääkäriltä chatissa ennen päivystykseen lähtemistä</li>
+    </ul>
+    <p>Hammassärkyä ei kannata jäädä seurailla pitkään. Mitä varhaisemmassa vaiheessa tulehdus hoidetaan, sitä yksinkertaisempaa — ja edullisempaa — hoito on.</p>
+
+  </div><!-- /article-body -->
+
+  <div class="author-box">
+    <div class="author-img">ÖA</div>
+    <div>
+      <div class="author-name">Ömer Acar</div>
+      <div class="author-title">Hammaslääkäri · Hammashelppi Oy, toimitusjohtaja ja perustaja</div>
+      <div class="author-bio">Ömer on hammaslääkäri ja Hammashelppi-etäpalvelun perustaja. Hän työskentelee kliinisesti hammaslääkärinä sekä kehittää Suomen ainoaa etähammaslääkäripalvelua. Erityisosaamisena suun terveyden ennaltaehkäisy ja potilaan ohjaus oikeaan hoitoon oikeaan aikaan.</div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h3>Lue myös</h3>
+    <div class="related-grid">
+      <a href="/blogi/antibiootti-etana" class="related-card">
+        <div class="related-tag">Resepti</div>
+        <div class="related-title">Voiko hammaslääkäri kirjoittaa antibiootteja etänä?</div>
+      </a>
+      <a href="/blogi/hammas-lohkesi" class="related-card">
+        <div class="related-tag">Tapaturma</div>
+        <div class="related-title">Hammas lohkesi — mitä tehdä ja kuinka nopeasti?</div>
+      </a>
+    </div>
+  </div>
+
+</div><!-- /article-wrap -->
+
+<footer>
+  <div class="footer-logo">Hammashelppi</div>
+  <ul class="footer-links">
+    <li><a href="/">Etusivu</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+    <li><a href="https://hammashelppi.fi/tietosuojaseloste" target="_blank">Tietosuoja</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#f697859f979d978586979a80939a83b69e979b9b97859e939a86869fd8909f">Yhte
