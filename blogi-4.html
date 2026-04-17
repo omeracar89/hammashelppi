@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#2E86C1;--blue-dark:#1A6FA8;--blue-light:#EAF4FB;--blue-mid:#BADAF0;--white:#FFFFFF;--bg:#F4F8FF;--ink:#1A2233;--ink-soft:#5A6478;--accent:#00B894;--rule:#D6E4F7;--radius:14px;}
+  *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--rule);}
+  .nav-logo{font-family:'DM Serif Display',serif;font-size:21px;color:var(--blue);text-decoration:none;}
+  .nav-back{font-size:14px;color:var(--ink-soft);text-decoration:none;display:flex;align-items:center;gap:6px;}
+  .nav-back:hover{color:var(--blue);}
+  .nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 22px;border-radius:100px;font-weight:500;text-decoration:none;font-size:14px;}
+  .nav-cta:hover{background:var(--blue-dark);}
+  .article-hero{max-width:760px;margin:0 auto;padding:60px 24px 0;}
+  .article-tag{display:inline-flex;align-items:center;gap:8px;background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:18px;border:1px solid var(--blue-mid);}
+  .article-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,48px);line-height:1.1;letter-spacing:-1px;color:var(--ink);margin-bottom:18px;}
+  .article-hero h1 em{font-style:italic;color:var(--blue);}
+  .article-meta{font-size:13px;color:var(--ink-soft);margin-bottom:36px;display:flex;gap:16px;flex-wrap:wrap;}
+  .article-lead{font-size:18px;color:var(--ink-soft);font-weight:300;line-height:1.7;margin-bottom:48px;border-bottom:1px solid var(--rule);padding-bottom:36px;}
+  .article-body{max-width:760px;margin:0 auto;padding:0 24px 80px;}
+  .article-body h2{font-family:'DM Serif Display',serif;font-size:clamp(20px,3vw,28px);color:var(--ink);margin:44px 0 14px;letter-spacing:-.5px;}
+  .article-body h2 em{font-style:italic;color:var(--blue);}
+  .article-body p{font-size:16px;color:var(--ink);line-height:1.75;margin-bottom:18px;}
+  .article-body ul,.article-body ol{margin:14px 0 20px 24px;}
+  .article-body li{font-size:16px;color:var(--ink);line-height:1.7;margin-bottom:8px;}
+  .article-body strong{color:var(--ink);font-weight:500;}
+  .info-box{background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:var(--radius);padding:22px 26px;margin:28px 0;}
+  .info-box p{margin:0;font-size:15px;color:var(--blue-dark);}
+  .warning-box{background:#fff8e1;border:1px solid #ffe082;border-radius:var(--radius);padding:22px 26px;margin:28px 0;}
+  .warning-box p{margin:0;font-size:15px;color:#7a5c00;}
+  .cta-box{background:var(--blue);border-radius:18px;padding:40px;text-align:center;margin:48px 0 0;}
+  .cta-box p{color:rgba(255,255,255,.85);font-size:17px;font-weight:300;margin-bottom:22px;}
+  .cta-box h3{font-family:'DM Serif Display',serif;font-size:26px;color:white;margin-bottom:10px;}
+  .btn-white{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--blue);padding:14px 30px;border-radius:100px;font-size:16px;font-weight:500;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 16px rgba(0,0,0,.15);}
+  .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+  .divider{border:none;border-top:1px solid var(--rule);max-width:760px;margin:0 auto;}
+  footer{background:var(--ink);padding:26px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .footer-logo{font-family:'DM Serif Display',serif;font-size:17px;color:rgba(255,255,255,.5);}
+  .footer-links{display:flex;gap:24px;list-style:none;flex-wrap:wrap;}
+  .footer-links a{font-size:13px;color:rgba(255,255,255,.35);text-decoration:none;}
+  .footer-links a:hover{color:rgba(255,255,255,.8);}
+  @media(max-width:700px){nav{padding:14px 20px;}.article-hero,.article-body{padding-left:18px;padding-right:18px;}footer{padding:20px;flex-direction:column;text-align:center;}}
+</style>
+<title>Hammaslääkäri ilman jonoa – vertaa vaihtoehdot 2025 – Hammashelppi</title>
+<meta name="description" content="Hammaslääkärille pääseminen voi kestää viikkoja. Realistinen vertailu: julkinen terveydenhuolto, yksityinen vastaanotto ja etähammaslääkäri – hinnat, jonotusajat ja milloin mikäkin sopii.">
+</head><body><nav>
+  <a href="index.html" class="nav-logo">Hammashelppi</a>
+  <a href="index.html#blogi" class="nav-back">← Takaisin blogiin</a>
+  <a href="index.html#lataa" class="nav-cta">Lataa sovellus</a>
+</nav>
+<article>
+<div class="article-hero">
+  <span class="article-tag">💰 Hinnat</span>
+  <h1>Hammaslääkäri ilman jonoa —<br><em>vertaa vaihtoehdot 2025</em></h1>
+  <div class="article-meta"><span>📅 Huhtikuu 2025</span><span>⏱ 4 min lukuaika</span></div>
+  <p class="article-lead">Hampaaseen sattuu. Pitäisi päästä hammaslääkärille — mutta milloin ja minne? Julkinen puoli jonottaa, yksityinen maksaa reilusti ja kaikkialla veloitetaan palvelumaksu ennen kuin mitään on tehty. Onko vaihtoehtoja? Tässä rehellinen vertailu kolmesta pääreiteistä — ilman myyntipiuhetta.</p>
+</div>
+<div class="article-body">
+  <h2>Vaihtoehto 1: <em>Julkinen hammashoito</em></h2>
+  <ul>
+    <li>💰 <strong>Hinta:</strong> Edullisin — asiakasmaksu n. 14–47 € toimenpiteestä riippuen</li>
+    <li>⏳ <strong>Jonotusaika:</strong> Usein 2–6 viikkoa; kiireellisiin tiloihin saman päivän arvio puhelimitse</li>
+    <li>✅ <strong>Sopii:</strong> Ei-kiireellisiin tilanteisiin, jos voit odottaa</li>
+    <li>❌ <strong>Ei sovi:</strong> Kun tarvitset apua nopeasti tai illalla/viikonloppuna</li>
+  </ul>
+
+  <h2>Vaihtoehto 2: <em>Yksityinen hammaslääkäri</em></h2>
+  <ul>
+    <li>💰 <strong>Hinta:</strong> Palvelumaksu 30–50 € + tutkimus 40–90 € + toimenpiteet erikseen. Kokonaishinta helposti 100–400 €</li>
+    <li>⏳ <strong>Jonotusaika:</strong> Yleensä muutamasta päivästä 1–2 viikkoon</li>
+    <li>✅ <strong>Sopii:</strong> Tilanteisiin joissa tarvitaan fyysinen käynti ja toimenpiteitä</li>
+    <li>❌ <strong>Ei sovi:</strong> Kun et vielä tiedä, tarvitseeko käyntiä lainkaan</li>
+  </ul>
+
+  <h2>Vaihtoehto 3: <em>Etähammaslääkäri (Hammashelppi)</em></h2>
+  <ul>
+    <li>💰 <strong>Hinta:</strong> 35 € koko konsultaatio — ei lisämaksuja, ei yllätyksiä</li>
+    <li>⏳ <strong>Odotusaika:</strong> Vastaus yleensä 1–3 tunnin sisällä. Auki 24/7</li>
+    <li>✅ <strong>Sopii:</strong> Tilanteen arviointiin, kiireellisyyden selvittämiseen, e-reseptiin, vakuutusdokumentaatioon</li>
+    <li>❌ <strong>Ei sovi:</strong> Fyysisiin toimenpiteisiin (paikkaus, poisto jne.)</li>
+  </ul>
+  <div class="info-box"><p>💡 <strong>Avainhuomio:</strong> Hammashelppi ei korvaa hammaslääkärikäyntiä — mutta se kertoo sinulle, tarvitseeko sinun mennä, milloin mennä ja minne mennä. Oikea tieto ennen päätöstä säästää aikaa ja rahaa.</p></div>
+
+  <h2>Älykkäin lähestymistapa useimmissa tilanteissa</h2>
+  <p>Monissa tapauksissa paras ratkaisu on <strong>aloittaa etähammaslääkäriltä</strong>. Jos tilanne vaatii käyntiä, saat ohjauksen heti. Jos ei vaadi, säästät sekä aikaa että satoja euroja.</p>
+  <p>Monilla yksityisvastaanotoilla pelkkä palvelumaksu on 30–50 € — ennen kuin mitään on tehty. Meillä 35 € sisältää koko konsultaation.</p>
+
+  <div class="cta-box">
+    <h3>Kysy ensin — säästä vastaanottomaksu 💸</h3>
+    <p>Etäkonsultaatio 35 €. Säästät jonottamisen ja mahdollisesti turhan käynnin kustannukset.</p>
+    <a href="https://apps.apple.com/fi/app/hammashelppi/id1582456029" class="btn-white">Aloita chat nyt →</a>
+  </div>
+</div>
+</article>
+<footer>
+  <div class="footer-logo">Hammashelppi</div>
+  <ul class="footer-links">
+    <li><a href="https://hammashelppi.fi/tyoterveyshammashoito" target="_blank">Yrityksille</a></li>
+    <li><a href="index.html#blogi">Blogi</a></li>
+    <li><a href="https://hammashelppi.fi/tietosuojaseloste" target="_blank">Tietosuoja</a></li>
+  </ul>
+</footer></body></html>

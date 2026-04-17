@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#2E86C1;--blue-dark:#1A6FA8;--blue-light:#EAF4FB;--blue-mid:#BADAF0;--white:#FFFFFF;--bg:#F4F8FF;--ink:#1A2233;--ink-soft:#5A6478;--accent:#00B894;--rule:#D6E4F7;--radius:14px;}
+  *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--rule);}
+  .nav-logo{font-family:'DM Serif Display',serif;font-size:21px;color:var(--blue);text-decoration:none;}
+  .nav-back{font-size:14px;color:var(--ink-soft);text-decoration:none;display:flex;align-items:center;gap:6px;}
+  .nav-back:hover{color:var(--blue);}
+  .nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 22px;border-radius:100px;font-weight:500;text-decoration:none;font-size:14px;}
+  .nav-cta:hover{background:var(--blue-dark);}
+  .article-hero{max-width:760px;margin:0 auto;padding:60px 24px 0;}
+  .article-tag{display:inline-flex;align-items:center;gap:8px;background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:18px;border:1px solid var(--blue-mid);}
+  .article-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,48px);line-height:1.1;letter-spacing:-1px;color:var(--ink);margin-bottom:18px;}
+  .article-hero h1 em{font-style:italic;color:var(--blue);}
+  .article-meta{font-size:13px;color:var(--ink-soft);margin-bottom:36px;display:flex;gap:16px;flex-wrap:wrap;}
+  .article-lead{font-size:18px;color:var(--ink-soft);font-weight:300;line-height:1.7;margin-bottom:48px;border-bottom:1px solid var(--rule);padding-bottom:36px;}
+  .article-body{max-width:760px;margin:0 auto;padding:0 24px 80px;}
+  .article-body h2{font-family:'DM Serif Display',serif;font-size:clamp(20px,3vw,28px);color:var(--ink);margin:44px 0 14px;letter-spacing:-.5px;}
+  .article-body h2 em{font-style:italic;color:var(--blue);}
+  .article-body p{font-size:16px;color:var(--ink);line-height:1.75;margin-bottom:18px;}
+  .article-body ul,.article-body ol{margin:14px 0 20px 24px;}
+  .article-body li{font-size:16px;color:var(--ink);line-height:1.7;margin-bottom:8px;}
+  .article-body strong{color:var(--ink);font-weight:500;}
+  .info-box{background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:var(--radius);padding:22px 26px;margin:28px 0;}
+  .info-box p{margin:0;font-size:15px;color:var(--blue-dark);}
+  .warning-box{background:#fff8e1;border:1px solid #ffe082;border-radius:var(--radius);padding:22px 26px;margin:28px 0;}
+  .warning-box p{margin:0;font-size:15px;color:#7a5c00;}
+  .cta-box{background:var(--blue);border-radius:18px;padding:40px;text-align:center;margin:48px 0 0;}
+  .cta-box p{color:rgba(255,255,255,.85);font-size:17px;font-weight:300;margin-bottom:22px;}
+  .cta-box h3{font-family:'DM Serif Display',serif;font-size:26px;color:white;margin-bottom:10px;}
+  .btn-white{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--blue);padding:14px 30px;border-radius:100px;font-size:16px;font-weight:500;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 16px rgba(0,0,0,.15);}
+  .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+  .divider{border:none;border-top:1px solid var(--rule);max-width:760px;margin:0 auto;}
+  footer{background:var(--ink);padding:26px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .footer-logo{font-family:'DM Serif Display',serif;font-size:17px;color:rgba(255,255,255,.5);}
+  .footer-links{display:flex;gap:24px;list-style:none;flex-wrap:wrap;}
+  .footer-links a{font-size:13px;color:rgba(255,255,255,.35);text-decoration:none;}
+  .footer-links a:hover{color:rgba(255,255,255,.8);}
+  @media(max-width:700px){nav{padding:14px 20px;}.article-hero,.article-body{padding-left:18px;padding-right:18px;}footer{padding:20px;flex-direction:column;text-align:center;}}
+</style>
+<title>Lapsi pelkää hammaslääkäriä – näin voit helpottaa tilannetta – Hammashelppi</title>
+<meta name="description" content="Lapsen hammaslääkäripelko on yleistä. Käytännön vinkit vanhemmille: kuinka puhua hammaslääkäristä, miten valmistella lasta ja miten etävastaanotto voi olla hyvä ensimmäinen askel.">
+</head><body><nav>
+  <a href="index.html" class="nav-logo">Hammashelppi</a>
+  <a href="index.html#blogi" class="nav-back">← Takaisin blogiin</a>
+  <a href="index.html#lataa" class="nav-cta">Lataa sovellus</a>
+</nav>
+<article>
+<div class="article-hero">
+  <span class="article-tag">😰 Lapsiperheet</span>
+  <h1>Lapsi pelkää hammaslääkäriä —<br><em>näin voit helpottaa tilannetta</em></h1>
+  <div class="article-meta"><span>📅 Huhtikuu 2025</span><span>⏱ 5 min lukuaika</span></div>
+  <p class="article-lead">Hammaslääkäripelko on yksi yleisimmistä lasten peloista — ja se voi helposti kantautua aikuisuuteen saakka, jos sitä ei käsitellä ajoissa. Mutta hyvä uutinen on: pelkoon voi vaikuttaa, ja vanhemmalla on siinä iso rooli.</p>
+</div>
+<div class="article-body">
+  <h2>Mistä hammaslääkäripelko yleensä johtuu?</h2>
+  <ul>
+    <li>Aiempi kivulias tai epämiellyttävä kokemus</li>
+    <li>Vieras ympäristö — äänet, valot, tuoksut</li>
+    <li>Hallinnan tunteen puute: "joku tekee suulleni jotain"</li>
+    <li>Vanhemman tai sisaruksen pelko, jonka lapsi on omaksunut</li>
+  </ul>
+
+  <h2>Mitä vanhempi <em>voi tehdä</em></h2>
+  <p><strong>Puhu hammaslääkäristä neutraalisti, ei pelottelevasti.</strong> Vältä lauseita kuten "ei satu yhtään" (lupauksia joita et voi pitää) tai "se menee nopeasti" (paineistaminen). Sen sijaan: "Hammaslääkäri katsoo, että hampaat ovat kunnossa."</p>
+  <p><strong>Leiki hammaslääkäriä kotona.</strong> Lapset prosessoivat pelkoja leikin kautta. Leikkikää hammaslääkäriä yhdessä — lapsi saa kokea olevansa hallinnassa tilanteessa, joka normaalisti tuntuu hallitsemattomalta.</p>
+  <p><strong>Lue kuvakirjoja aiheesta.</strong> On olemassa monia lastenkirjoja, joissa lapsi käy hammaslääkärissä. Ne normalisoivat tilanteen turvallisesti kotona, rauhallisessa ympäristössä.</p>
+  <p><strong>Anna lapsen tutustua ympäristöön ilman toimenpiteitä.</strong> Ensimmäinen käynti voi olla pelkkä "tervehdyskäynti" — istutaan tuolilla, tutkitaan välineistöä, jutellaan hammaslääkärin kanssa.</p>
+
+  <h2>Hammashelppi <em>ensimmäisenä askeleena</em></h2>
+  <p>Joskus paras tapa lähestyä hammasasiaa pelokkaan lapsen kanssa on aloittaa kotoa käsin. Hammashelpin chat-palvelussa lapsi voi olla läsnä vanhemman kanssa — hammaslääkäri arvioi tilanteen kuvasta, ja lapsi näkee, että:</p>
+  <ul>
+    <li>Hammaslääkäri on ystävällinen ja auttavainen</li>
+    <li>Asia voidaan hoitaa rauhallisesti, ilman "pelottavaa tuolia"</li>
+    <li>Hammasasiat eivät aina vaadi kipua tai toimenpiteitä</li>
+  </ul>
+  <div class="info-box"><p>💡 Moni lapsi, joka on aluksi käyttänyt Hammashelppiä vanhemman kanssa, on helpommin suostunut myöhemmin fyysiselle vastaanotolle — koska hammaslääkäri ei enää ole täysin vieras tai pelottava käsite.</p></div>
+
+  <h2>Milloin hakea lisäapua pelkoon?</h2>
+  <p>Jos lapsen pelko on niin voimakas, että se estää kokonaan hoidon saamisen, on hyvä puhua asiasta lastenlääkärille tai psykologille. Jotkut hammaslääkärit ovat myös erikoistuneet pelkopotilaisiin — kysyminen kannattaa.</p>
+
+  <div class="cta-box">
+    <h3>Aloita hammasasiat kotoa käsin 🏠</h3>
+    <p>Turvallinen, rauhallinen ensimmäinen askel — vaikka yhdessä lapsen kanssa sohvalta.</p>
+    <a href="https://apps.apple.com/fi/app/hammashelppi/id1582456029" class="btn-white">Kokeile Hammashelppiä →</a>
+  </div>
+</div>
+</article>
+<footer>
+  <div class="footer-logo">Hammashelppi</div>
+  <ul class="footer-links">
+    <li><a href="https://hammashelppi.fi/tyoterveyshammashoito" target="_blank">Yrityksille</a></li>
+    <li><a href="index.html#blogi">Blogi</a></li>
+    <li><a href="https://hammashelppi.fi/tietosuojaseloste" target="_blank">Tietosuoja</a></li>
+  </ul>
+</footer></body></html>
