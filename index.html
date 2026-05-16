@@ -58,8 +58,8 @@
 
   .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:110px 48px 72px;gap:64px;max-width:1200px;margin:0 auto;}
   .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--blue-light);color:var(--blue);font-size:13px;font-weight:500;padding:6px 14px;border-radius:100px;margin-bottom:24px;border:1px solid var(--blue-mid);}
-  .eyebrow-dot{width:7px;height:7px;background:var(--blue);border-radius:50%;animation:pulse 2s infinite;}
-  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+  .eyebrow-dot{width:8px;height:8px;border-radius:50%;animation:pulse-color 1.5s infinite;}
+  @keyframes pulse-color{0%,100%{background:#00C853;box-shadow:0 0 6px rgba(0,200,83,0.7);}50%{background:#E53935;box-shadow:0 0 6px rgba(229,57,53,0.7);}}
   h1{font-family:'DM Serif Display',serif;font-size:clamp(38px,5vw,60px);line-height:1.08;letter-spacing:-1.5px;color:var(--ink);margin-bottom:20px;}
   h1 em{font-style:italic;color:var(--blue);}
   .hero-sub{font-size:18px;color:var(--ink-soft);font-weight:300;line-height:1.75;margin-bottom:14px;max-width:460px;}
