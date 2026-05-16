@@ -10,8 +10,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
 
-  // Consent Mode v2 — GDPR-compliant defaults (denied until user opts in)
-  // Update with gtag('consent', 'update', {...}) when cookie banner is installed
   gtag('consent', 'default', {
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
@@ -746,5 +744,44 @@
         scrollTimer = null;
       }, 250);
     }, { passive: true });
+  })();
+</script>
+
+<!-- Evästebanneri -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1A2233;color:#fff;padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.18);font-family:'DM Sans',sans-serif;">
+  <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:16px;">
+    <div style="flex:1;min-width:220px;font-size:14px;line-height:1.6;color:#c8d6e8;">
+      Käytämme Google Analyticsia sivuston käytön analysoimiseen. Tiedot ovat anonyymejä. Voit hyväksyä tai hylätä analytiikkaevästeet.
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:#60a5fa;margin-left:6px;">Lisätietoja</a>
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="cookieDecline()" style="padding:10px 20px;border-radius:8px;border:1px solid #5A6478;background:transparent;color:#c8d6e8;font-size:14px;cursor:pointer;font-family:inherit;">Hylkää</button>
+      <button onclick="cookieAccept()" style="padding:10px 24px;border-radius:8px;border:none;background:#2E86C1;color:#fff;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;">Hyväksy</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function cookieAccept() {
+    localStorage.setItem('cookie_consent', 'granted');
+    document.getElementById('cookie-banner').style.display = 'none';
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+    });
+    gtag('event', 'cookie_consent', { 'choice': 'accepted' });
+  }
+
+  function cookieDecline() {
+    localStorage.setItem('cookie_consent', 'denied');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  (function() {
+    var consent = localStorage.getItem('cookie_consent');
+    if (!consent) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    } else if (consent === 'granted') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    }
   })();
 </script>
