@@ -762,6 +762,18 @@
 </div>
 
 <script>
+  // Lataa-nappien seuranta
+  document.querySelectorAll('a[href*="apps.apple.com"], a[href*="play.google.com"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var store = el.href.includes('apple.com') ? 'App Store' : 'Google Play';
+      var loc = el.getAttribute('data-loc') || 'tuntematon';
+      gtag('event', 'app_download_click', {
+        'store': store,
+        'location': loc
+      });
+    });
+  });
+
   function cookieAccept() {
     localStorage.setItem('cookie_consent', 'granted');
     document.getElementById('cookie-banner').style.display = 'none';
