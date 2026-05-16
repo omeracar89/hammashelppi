@@ -228,9 +228,9 @@
 
 <div class="hero">
   <div>
-    <div class="hero-eyebrow"><span class="eyebrow-dot"></span>Chat auki 24/7 — vastaus tyypillisesti tunneissa</div>
-    <h1>Ennen kuin<br>varaat ajan,<br><em>tiedä tilanteesi.</em></h1>
-    <p class="hero-sub">35 €:lla saat hammaslääkärin kirjallisen arvion — ei pelkkiä neuvoja, vaan päätöksen siitä mitä teet seuraavaksi: tarvitsetko hoitoa, kuinka kiireellinen tilanne on, ja mihin kannattaa hakeutua.</p>
+    <div class="hero-eyebrow"><span class="eyebrow-dot"></span>Chat auki 24/7 — hammaslääkäri vastaa tunneissa</div>
+    <h1>Särkee, huolettaa<br>tai epäilyttää?<br><em>Kysy hammaslääkäriltä ensin.</em></h1>
+    <p class="hero-sub">Kuvaa tilanteesi ja lähetä kuva chatissa — saat nopeasti selkeän arvion siitä, tarvitsetko hoitoa vai et. Tarvittaessa e-resepti tai lausunto vakuutusyhtiölle ilman vastaanottokäyntiä.</p>
     
     <div class="hero-actions">
       <a href="https://apps.apple.com/fi/app/hammashelppi/id1582456029" target="_blank" class="btn-primary" data-loc="hero">🍎 App Store</a>
@@ -242,6 +242,10 @@
       <span>✓ Maksat vasta kun asioit</span>
       <span>✓ Et tyytyväinen? Rahat takaisin 24 h</span>
     </div>
+    <div style="margin-top:12px;font-size:13px;color:var(--blue);font-weight:500;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+      <span>📋 Vakuutusyhtiölle kelpaava lausunto tarvittaessa</span>
+      <span>💊 E-resepti tarvittaessa</span>
+    </div>
     <div class="hero-trust">
       <div class="trust-avatars">
         <div class="trust-avatar">ML</div>
@@ -250,7 +254,7 @@
         <div class="trust-avatar">AS</div>
       </div>
       <div>
-        <div class="stars">★★★★★</div>
+        <div class="stars">★★★★★ <span style="color:var(--ink);font-weight:600;">5.0</span> <span style="color:var(--ink-soft);font-weight:400;">App Store</span></div>
         <div>Yli 1 200 tyytyväistä asiakasta</div>
       </div>
     </div>
@@ -744,6 +748,29 @@
         scrollTimer = null;
       }, 250);
     }, { passive: true });
+  })();
+</script>
+
+<!-- Mobiili CTA -palkki -->
+<div id="mobile-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;background:#fff;border-top:1px solid #D6E4F7;padding:12px 16px;box-shadow:0 -4px 20px rgba(46,134,193,0.12);font-family:'DM Sans',sans-serif;">
+  <div style="font-size:13px;font-weight:500;color:#1A2233;margin-bottom:8px;text-align:center;">Hammasvaiva? Saat arvion tänään — 35 €</div>
+  <div style="display:flex;gap:8px;">
+    <a href="https://apps.apple.com/fi/app/hammashelppi/id1582456029" target="_blank" data-loc="mobile_bar" onclick="gtag('event','app_download_click',{'store':'App Store','location':'mobile_bar'})" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:#2E86C1;color:#fff;padding:13px;border-radius:12px;text-decoration:none;font-size:14px;font-weight:500;">🍎 App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=fi.suujahammas.hammashelppi&hl=fi" target="_blank" data-loc="mobile_bar" onclick="gtag('event','app_download_click',{'store':'Google Play','location':'mobile_bar'})" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:#1A6FA8;color:#fff;padding:13px;border-radius:12px;text-decoration:none;font-size:14px;font-weight:500;">▶ Google Play</a>
+  </div>
+</div>
+<script>
+  (function() {
+    if (window.innerWidth <= 768) {
+      var bar = document.getElementById('mobile-cta');
+      var shown = false;
+      window.addEventListener('scroll', function() {
+        if (!shown && window.scrollY > 300) {
+          bar.style.display = 'block';
+          shown = true;
+        }
+      }, { passive: true });
+    }
   })();
 </script>
 
