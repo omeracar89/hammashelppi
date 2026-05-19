@@ -896,12 +896,14 @@
 
   var opened = false;
   function open(trigger){
-    if (opened || suppressed() || cookieBannerVisible()) return;
+    if (opened || suppressed()) { opened = true; return 'done'; }
+    if (cookieBannerVisible()) return 'wait';
     opened = true;
     hideMobileBar(true);
     widget.classList.add('open');
     renderQ1();
     track('triage_open', { trigger: trigger });
+    return 'opened';
   }
   window.triageClose = function(reason){
     widget.classList.remove('open');
@@ -1014,18 +1016,34 @@
       '<div class="triage-result-text" style="margin-bottom:0;">Hengenvaarallisessa tilanteessa soita aina 112.</div>';
   }
 
-  // Triggers: dwell timer or scroll depth, whichever fires first
-  var dwellTimer = setTimeout(function(){ open('dwell'); }, DWELL_MS);
+  // Triggers: dwell timer or scroll depth, whichever fires first.
+  // If the cookie banner is still up when a trigger fires, open() returns
+  // 'wait' and we retry — otherwise the user can lose both triggers
+  // permanently by scrolling past 50% before dismissing the banner.
+  function attemptDwell(){
+    if (open('dwell') === 'wait') setTimeout(attemptDwell, 1000);
+  }
+  setTimeout(attemptDwell, DWELL_MS);
+
   function scrollHandler(){
     var st = window.pageYOffset || document.documentElement.scrollTop;
     var dh = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) - window.innerHeight;
     if (dh <= 0) return;
     if (Math.round((st / dh) * 100) >= SCROLL_PCT) {
-      window.removeEventListener('scroll', scrollHandler);
-      clearTimeout(dwellTimer);
-      open('scroll');
+      if (open('scroll') !== 'wait') {
+        window.removeEventListener('scroll', scrollHandler);
+      }
     }
   }
   window.addEventListener('scroll', scrollHandler, { passive: true });
+
+  // After the user dismisses the cookie banner, give the dwell loop a quick
+  // nudge so a user who already scrolled past 50% doesn't have to scroll again.
+  ['cookieAccept', 'cookieDecline'].forEach(function(name){
+    var orig = window[name];
+    if (typeof orig === 'function') {
+      window[name] = function(){ try { orig.apply(this, arguments); } finally { setTimeout(attemptDwell, 200); } };
+    }
+  });
 })();
 </script>
