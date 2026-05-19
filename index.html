@@ -812,7 +812,7 @@
 
 <!-- Triage-pikatesti (automaattinen ohjeistus, ei konsultaatio) -->
 <style>
-  #triage-widget{position:fixed;right:20px;bottom:20px;z-index:9997;width:340px;max-width:calc(100vw - 24px);background:#fff;border:1px solid #D6E4F7;border-radius:18px;box-shadow:0 16px 48px rgba(46,134,193,.18),0 4px 12px rgba(0,0,0,.06);font-family:'DM Sans',sans-serif;color:#1A2233;overflow:hidden;display:none;animation:triageIn .35s cubic-bezier(.2,.8,.2,1);}
+  #triage-widget{position:fixed;right:20px;bottom:calc(20px + var(--triage-bottom-offset,0px));z-index:9997;width:340px;max-width:calc(100vw - 24px);background:#fff;border:1px solid #D6E4F7;border-radius:18px;box-shadow:0 16px 48px rgba(46,134,193,.18),0 4px 12px rgba(0,0,0,.06);font-family:'DM Sans',sans-serif;color:#1A2233;overflow:hidden;display:none;animation:triageIn .35s cubic-bezier(.2,.8,.2,1);transition:bottom .25s ease;}
   @keyframes triageIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
   #triage-widget.open{display:block;}
   .triage-head{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid #EAF4FB;background:linear-gradient(180deg,#F4F8FF,#fff);}
@@ -843,7 +843,7 @@
   .triage-emergency-num{display:block;background:#c0392b;color:#fff;text-align:center;padding:12px;border-radius:10px;text-decoration:none;font-weight:600;font-size:16px;margin-top:10px;}
   .triage-foot{padding:10px 16px;border-top:1px solid #EAF4FB;background:#F8FBFF;font-size:10px;color:#5A6478;text-align:center;line-height:1.4;}
   @media(max-width:560px){
-    #triage-widget{right:0;left:0;bottom:0;width:100%;max-width:100%;border-radius:18px 18px 0 0;border-left:none;border-right:none;border-bottom:none;}
+    #triage-widget{right:0;left:0;bottom:var(--triage-bottom-offset,0px);width:100%;max-width:100%;border-radius:18px 18px 0 0;border-left:none;border-right:none;border-bottom:none;}
   }
 </style>
 
@@ -883,9 +883,11 @@
       return d > cutoff || c > cutoff;
     } catch(e){ return false; }
   }
-  function cookieBannerVisible(){
-    var el = document.getElementById('cookie-banner');
-    return el && el.style.display !== 'none' && el.offsetHeight > 0;
+  function updateBottomOffset(){
+    var banner = document.getElementById('cookie-banner');
+    var visible = banner && banner.style.display !== 'none' && banner.offsetHeight > 0;
+    var h = visible ? banner.offsetHeight : 0;
+    document.documentElement.style.setProperty('--triage-bottom-offset', h + 'px');
   }
   function hideMobileBar(hide){
     var el = document.getElementById('mobile-cta');
@@ -897,9 +899,9 @@
   var opened = false;
   function open(trigger){
     if (opened || suppressed()) { opened = true; return 'done'; }
-    if (cookieBannerVisible()) return 'wait';
     opened = true;
     hideMobileBar(true);
+    updateBottomOffset();
     widget.classList.add('open');
     renderQ1();
     track('triage_open', { trigger: trigger });
@@ -1017,32 +1019,31 @@
   }
 
   // Triggers: dwell timer or scroll depth, whichever fires first.
-  // If the cookie banner is still up when a trigger fires, open() returns
-  // 'wait' and we retry — otherwise the user can lose both triggers
-  // permanently by scrolling past 50% before dismissing the banner.
-  function attemptDwell(){
-    if (open('dwell') === 'wait') setTimeout(attemptDwell, 1000);
-  }
-  setTimeout(attemptDwell, DWELL_MS);
+  setTimeout(function(){ open('dwell'); }, DWELL_MS);
 
   function scrollHandler(){
     var st = window.pageYOffset || document.documentElement.scrollTop;
     var dh = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) - window.innerHeight;
     if (dh <= 0) return;
     if (Math.round((st / dh) * 100) >= SCROLL_PCT) {
-      if (open('scroll') !== 'wait') {
-        window.removeEventListener('scroll', scrollHandler);
-      }
+      open('scroll');
+      window.removeEventListener('scroll', scrollHandler);
     }
   }
   window.addEventListener('scroll', scrollHandler, { passive: true });
 
-  // After the user dismisses the cookie banner, give the dwell loop a quick
-  // nudge so a user who already scrolled past 50% doesn't have to scroll again.
+  // Keep the widget docked above the cookie banner as long as the banner is
+  // visible — and slide it down when the banner is dismissed.
+  updateBottomOffset();
+  window.addEventListener('resize', updateBottomOffset);
+  if (window.ResizeObserver) {
+    var bannerEl = document.getElementById('cookie-banner');
+    if (bannerEl) new ResizeObserver(updateBottomOffset).observe(bannerEl);
+  }
   ['cookieAccept', 'cookieDecline'].forEach(function(name){
     var orig = window[name];
     if (typeof orig === 'function') {
-      window[name] = function(){ try { orig.apply(this, arguments); } finally { setTimeout(attemptDwell, 200); } };
+      window[name] = function(){ try { orig.apply(this, arguments); } finally { setTimeout(updateBottomOffset, 50); } };
     }
   });
 })();
