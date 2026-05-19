@@ -90,7 +90,7 @@
   .floating-badge{position:absolute;top:-14px;right:-14px;background:var(--white);border-radius:var(--radius);padding:11px 15px;box-shadow:0 6px 20px rgba(0,0,0,.10);font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;border:1px solid var(--rule);}
 
   .stats-bar{background:var(--blue);padding:32px 48px;}
-  .stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+  .stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;}
   .stat-num{font-family:'DM Serif Display',serif;font-size:34px;color:var(--white);letter-spacing:-1px;display:block;}
   .stat-label{font-size:13px;color:rgba(255,255,255,.75);margin-top:4px;}
 
@@ -165,7 +165,6 @@
   .faq-item.open .faq-a{display:block;}
   .faq-item.open .faq-icon{transform:rotate(45deg);}
 
-  .qr-section{background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:20px;padding:44px;display:grid;grid-template-columns:1fr auto;gap:44px;align-items:center;max-width:1200px;margin:0 auto;}
   .qr-boxes{display:flex;gap:20px;}
   .qr-box{text-align:center;}
   .qr-placeholder{width:110px;height:110px;border-radius:12px;background:var(--white);border:2px solid var(--blue-mid);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--ink-soft);margin-bottom:8px;line-height:1.5;text-align:center;padding:8px;}
@@ -174,7 +173,9 @@
   .cta-section{background:var(--blue-dark);padding:80px 48px;text-align:center;}
   .cta-inner{max-width:580px;margin:0 auto;}
   .cta-section h2{color:var(--white);font-size:clamp(28px,4vw,48px);margin-bottom:16px;}
-  .cta-section p{color:rgba(255,255,255,.6);font-size:17px;font-weight:300;margin-bottom:36px;}
+  .cta-section p{color:rgba(255,255,255,.6);font-size:17px;font-weight:300;margin-bottom:28px;}
+  .cta-section .qr-boxes{justify-content:center;margin:0 0 26px;}
+  .cta-section .qr-label{color:rgba(255,255,255,.65);margin-top:8px;}
   .app-buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:20px;}
   .app-btn{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:var(--white);padding:13px 22px;border-radius:14px;text-decoration:none;transition:background .2s;}
   .app-btn:hover{background:rgba(255,255,255,.2);}
@@ -197,15 +198,15 @@
     .nav-links{display:none;}
     .hero{grid-template-columns:1fr;padding:90px 20px 52px;gap:36px;}
     .hero-visual{order:-1;}
-    .stats-inner{grid-template-columns:repeat(2,1fr);}
+    .stats-inner{grid-template-columns:repeat(3,1fr);gap:14px;}
     .stats-bar,.partners{padding:24px 20px;}
     .value-inner,section,.testimonials-inner{padding:56px 20px;}
     .value-grid,.steps{grid-template-columns:1fr;}
     .conditions-grid{grid-template-columns:repeat(2,1fr);}
     .pricing-card{grid-template-columns:1fr;padding:28px;gap:28px;}
     .testimonials-grid,.blog-grid{grid-template-columns:1fr;}
-    .qr-section{grid-template-columns:1fr;padding:28px 20px;}
     .qr-boxes{justify-content:center;}
+    .cta-section .qr-boxes{display:none;}
     .cta-section{padding:56px 20px;}
     footer{flex-direction:column;gap:16px;padding:20px;text-align:center;}
     .floating-badge{display:none;}
@@ -241,10 +242,6 @@
       <span>✓ Sovellus ilmainen</span>
       <span>✓ Maksat vasta kun asioit</span>
       <span>✓ Et tyytyväinen? Rahat takaisin 24 h</span>
-    </div>
-    <div style="margin-top:12px;font-size:13px;color:var(--blue);font-weight:500;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
-      <span>📋 Vakuutusyhtiölle kelpaava lausunto tarvittaessa</span>
-      <span>💊 E-resepti tarvittaessa</span>
     </div>
     <div class="hero-trust">
       <div class="trust-avatars">
@@ -285,7 +282,6 @@
     <div><span class="stat-num">88%</span><div class="stat-label">Koki palvelun hyödyttäneen jatkohoidon järjestämisessä</div></div>
     <div><span class="stat-num">15%</span><div class="stat-label">Hammaslääkärikäynneistä on turhia — tiedä ensin</div></div>
     <div><span class="stat-num">35 €</span><div class="stat-label">Per asiointi</div></div>
-    <div><span class="stat-num">100%</span><div class="stat-label">Tyytyväisyystakuu</div></div>
   </div>
 </div>
 
@@ -339,7 +335,6 @@
     <div style="text-align:center;margin-top:32px;">
       <a href="https://apps.apple.com/fi/app/hammashelppi/id1582456029" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:white;color:var(--blue);padding:15px 28px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;margin:4px;" data-loc="comparison">🍎 App Store</a>
       <a href="https://play.google.com/store/apps/details?id=fi.suujahammas.hammashelppi&hl=fi" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.15);color:white;border:1px solid rgba(255,255,255,.3);padding:15px 28px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;margin:4px;" data-loc="comparison">▶ Google Play</a>
-      <div style="font-size:13px;color:rgba(255,255,255,.35);margin-top:12px;">100% tyytyväisyystakuu · ei sitoutumista</div>
     </div>
   </div>
 </section>
@@ -357,7 +352,7 @@
       <div class="value-card">
         <span class="value-icon">⏱️</span>
         <h3>Ei jonoissa istumista</h3>
-        <p>Hammaslääkärille pääsee usein <span class="value-highlight">viikkojen päähän</span>. Meidän chattimme on auki nyt — vastaus <span class="value-highlight">yleensä parin tunnin sisällä</span>, joskus heti.</p>
+        <p>Hammaslääkärille pääsee usein <span class="value-highlight">viikkojen päähän</span>. Meidän chattimme on auki nyt — joskus jopa heti.</p>
       </div>
       <div class="value-card">
         <span class="value-icon">🎯</span>
@@ -613,13 +608,10 @@
   </div>
 </section>
 
-<section id="lataa" style="padding-top:0">
-  <div class="qr-section">
-    <div>
-      <p class="section-label">Lataa sovellus</p>
-      <h2 style="margin-bottom:12px">Skannaa ja<br><em>aloita heti</em></h2>
-      <p style="font-size:16px;color:var(--ink-soft);font-weight:300;max-width:360px;line-height:1.7">Osoita puhelimesi kamera QR-koodiin — sovellus aukeaa suoraan sovelluskaupassa. Tai hae hakusanalla "Hammashelppi".</p>
-    </div>
+<div class="cta-section" id="lataa">
+  <div class="cta-inner">
+    <h2>Hammasvaiva?<br>Tiedä ennen kuin maksat.</h2>
+    <p>Lataa Hammashelppi ilmaiseksi — saat hammaslääkärin kirjallisen arvion 35 €:lla, vastaus tunneissa.</p>
     <div class="qr-boxes">
       <div class="qr-box">
 <a href="https://apps.apple.com/fi/app/hammashelppi/id1582456029" target="_blank" data-loc="qr_section">
@@ -634,13 +626,6 @@
         <div class="qr-label">▶ Google Play</div>
       </div>
     </div>
-  </div>
-</section>
-
-<div class="cta-section">
-  <div class="cta-inner">
-    <h2>Hammasvaiva?<br>Tiedä ennen kuin maksat.</h2>
-    <p>Lataa Hammashelppi ilmaiseksi — saat hammaslääkärin kirjallisen arvion 35 €:lla, vastaus tunneissa.</p>
     <div class="app-buttons">
       <a href="https://apps.apple.com/fi/app/hammashelppi/id1582456029" target="_blank" class="app-btn" data-loc="footer_cta">
         <span class="app-btn-icon">🍎</span>
@@ -651,7 +636,6 @@
         <span><span class="app-btn-label">Lataa</span><span class="app-btn-name">Google Play</span></span>
       </a>
     </div>
-    <div style="font-size:13px;color:rgba(255,255,255,.35)">Ilmainen sovellus · alkaen 35 € / asiointi · 100% tyytyväisyystakuu</div>
   </div>
 </div>
 
