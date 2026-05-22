@@ -864,7 +864,7 @@
 (function(){
   var KEY_DISMISSED = 'triage_dismissed_at';
   var KEY_DONE = 'triage_completed_at';
-  var SUPPRESS_DAYS = 7;
+  var SUPPRESS_HOURS = 12;
   var DWELL_MS = 15000;
   var SCROLL_PCT = 30;
 
@@ -875,7 +875,14 @@
   function track(name, params){
     if (typeof gtag === 'function') gtag('event', name, params || {});
   }
-  function suppressed(){ return false; }
+  function suppressed(){
+    try {
+      var d = parseInt(localStorage.getItem(KEY_DISMISSED) || '0', 10);
+      var c = parseInt(localStorage.getItem(KEY_DONE) || '0', 10);
+      var cutoff = Date.now() - SUPPRESS_HOURS * 3600000;
+      return d > cutoff || c > cutoff;
+    } catch(e){ return false; }
+  }
   function updateBottomOffset(){
     var banner = document.getElementById('cookie-banner');
     var visible = banner && banner.style.display !== 'none' && banner.offsetHeight > 0;
