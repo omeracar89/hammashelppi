@@ -875,14 +875,7 @@
   function track(name, params){
     if (typeof gtag === 'function') gtag('event', name, params || {});
   }
-  function suppressed(){
-    try {
-      var d = parseInt(localStorage.getItem(KEY_DISMISSED) || '0', 10);
-      var c = parseInt(localStorage.getItem(KEY_DONE) || '0', 10);
-      var cutoff = Date.now() - SUPPRESS_DAYS * 86400000;
-      return d > cutoff || c > cutoff;
-    } catch(e){ return false; }
-  }
+  function suppressed(){ return false; }
   function updateBottomOffset(){
     var banner = document.getElementById('cookie-banner');
     var visible = banner && banner.style.display !== 'none' && banner.offsetHeight > 0;
