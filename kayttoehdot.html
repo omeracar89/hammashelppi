@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Käyttöehdot – Hammashelppi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#2E86C1;--blue-dark:#1A6FA8;--blue-light:#EAF4FB;--blue-mid:#BADAF0;
+    --white:#FFFFFF;--bg:#F4F8FF;--ink:#1A2233;--ink-soft:#5A6478;--accent:#00B894;
+    --rule:#D6E4F7;--radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:var(--blue);}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--rule);}
+  .nav-logo{font-family:'DM Serif Display',serif;font-size:21px;color:var(--blue);letter-spacing:-0.4px;text-decoration:none;}
+  .nav-back{font-size:14px;color:var(--ink-soft);text-decoration:none;}
+  .nav-back:hover{color:var(--blue);}
+
+  .legal{max-width:780px;margin:0 auto;padding:56px 24px 80px;}
+  .legal-head h1{font-family:'DM Serif Display',serif;font-size:40px;letter-spacing:-1px;line-height:1.1;margin-bottom:14px;}
+  .legal-meta{font-size:13px;color:var(--ink-soft);margin-bottom:28px;}
+  .legal-meta span{display:inline-block;margin-right:18px;}
+
+  .draft-banner{background:#FFF7E6;border:1px solid #F0C36D;border-radius:var(--radius);padding:16px 18px;font-size:14px;color:#5a4a1f;line-height:1.55;margin-bottom:36px;}
+  .draft-banner strong{color:#7a5c12;}
+
+  .legal h2{font-size:21px;letter-spacing:-.3px;margin:40px 0 12px;padding-top:8px;border-top:1px solid var(--rule);}
+  .legal h2:first-of-type{border-top:none;padding-top:0;}
+  .legal h3{font-size:16px;margin:22px 0 8px;}
+  .legal p{margin:0 0 14px;color:#2a3343;}
+  .legal ul{margin:0 0 16px 22px;}
+  .legal li{margin-bottom:8px;}
+  .legal .fill{background:var(--blue-light);border-bottom:1px dashed var(--blue-mid);padding:0 3px;border-radius:3px;color:var(--blue-dark);font-size:.95em;}
+  .legal .note{background:var(--bg);border-left:3px solid var(--blue-mid);border-radius:6px;padding:12px 16px;font-size:14px;color:var(--ink-soft);margin:0 0 16px;}
+  .legal .alert{background:#FFF1F0;border-left:3px solid #E07A6B;border-radius:6px;padding:14px 16px;margin:0 0 18px;}
+  .legal .alert strong{color:#b23a2b;}
+
+  .contact-card{background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:var(--radius);padding:22px 24px;margin-top:8px;font-size:15px;}
+  .contact-card div{margin-bottom:4px;}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.6);padding:28px 48px;text-align:center;font-size:13px;margin-top:40px;}
+  footer a{color:rgba(255,255,255,.7);}
+
+  @media(max-width:640px){
+    nav{padding:14px 20px;}
+    .legal{padding:36px 20px 56px;}
+    .legal-head h1{font-size:30px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Hammashelppi</a>
+  <a href="/" class="nav-back">← Etusivulle</a>
+</nav>
+
+<main class="legal">
+  <div class="legal-head">
+    <h1>Käyttöehdot</h1>
+    <div class="legal-meta">
+      <span>Päivitetty viimeksi: 25.5.2026</span>
+      <span>Voimassa alkaen: <span class="fill">[pp.kk.vvvv]</span></span>
+      <span>Versio 1.0</span>
+    </div>
+  </div>
+
+  <div class="draft-banner">
+    <strong>Luonnos.</strong> Tämä teksti on työversio, joka tulee tarkistuttaa
+    terveydenhuolto- ja kuluttajaoikeuteen erikoistuneella lakimiehellä ennen julkaisua.
+    Täytettävät kohdat on korostettu.
+  </div>
+
+  <!--
+    SISÄINEN MUISTILISTA – EI JULKAISTA. Tarkistettavat kohdat:
+    - Yritys- ja rekisteritiedot (Y-tunnus, osoite, vastaava hammaslääkäri)
+    - Yksityisen terveydenhuollon palveluntuottajan lupa/ilmoitus (AVI/Valvira, Soteri)
+    - Potilasvakuutuksen voimassaolo ja vakuutuksenantaja
+    - Peruuttamisoikeus: kuluttajansuojalain 6 luvun menettely digitaalisille palveluille
+    - Reseptien etämääräämisen viranomaisohjeet (Fimea/Valvira)
+    - Arvonlisäverokohtelu (terveydenhuoltopalvelut)
+    - Tekoäly/kuvien käyttö: anonymisointi vs. pseudonymisointi, käsittelyperuste,
+      erillinen opt-in-suostumus, toisiolaki/Findata, DPIA, DPO:n arvio
+    - Alaikäisten hoito ja huoltajan suostumus
+    - Tietosuojaselosteen linkki ja yhdenmukaisuus
+    - Maksunvälittäjän nimi ja ehdot
+  -->
+
+  <h2>1. Sopimuksen osapuolet ja soveltamisala</h2>
+  <p>Näitä käyttöehtoja sovelletaan Hammashelppi-palvelun (jäljempänä <strong>"Palvelu"</strong>)
+  käyttöön. Palvelu on mobiilisovellus ja siihen liittyvä verkkopalvelu, jonka kautta
+  käyttäjä voi olla etäyhteydessä laillistettuun hammaslääkäriin.</p>
+  <p>Terveydenhuollon palveluista vastaava ja potilasrekisterin rekisterinpitäjä on
+  <strong>Acar &amp; Högman Oy</strong> (Y-tunnus <span class="fill">[Y-tunnus]</span>,
+  osoite <span class="fill">[osoite]</span>) (jäljempänä <strong>"Palveluntarjoaja"</strong>).
+  Palvelussa annettavasta terveydenhuollosta vastaa Palveluntarjoaja ja sen lukuun toimivat
+  laillistetut hammaslääkärit.</p>
+  <p><strong>Hammashelppi</strong> toimii palvelualustan ylläpitäjänä ja kehittäjänä.</p>
+  <p>Vastaava hammaslääkäri (terveydenhuollon vastuuhenkilö):
+  <span class="fill">[Etunimi Sukunimi]</span>.</p>
+  <p>Hyväksymällä nämä käyttöehdot ja ottamalla Palvelun käyttöön käyttäjä (jäljempänä
+  <strong>"Käyttäjä"</strong>) sitoutuu noudattamaan näitä ehtoja. Jos et hyväksy ehtoja,
+  älä käytä Palvelua.</p>
+
+  <h2>2. Määritelmät</h2>
+  <ul>
+    <li><strong>Palvelu</strong> – Hammashelppi-sovellus ja -verkkopalvelu sekä niiden
+    kautta tarjottava etähammaslääkäripalvelu.</li>
+    <li><strong>Etäkonsultaatio</strong> – hammaslääkärin antama kirjallinen arvio ja
+    ohjeistus, joka perustuu Käyttäjän chatissa antamiin tietoihin ja toimittamiin
+    valokuviin.</li>
+    <li><strong>Hammaslääkäri</strong> – Palveluntarjoajan lukuun toimiva, Suomessa
+    laillistettu hammaslääkäri (Valviran rekisterissä oleva terveydenhuollon
+    ammattihenkilö).</li>
+    <li><strong>Sisältö</strong> – kaikki Käyttäjän Palveluun toimittama aineisto, mukaan
+    lukien tekstit, oirekuvaukset ja valokuvat.</li>
+  </ul>
+
+  <h2>3. Palvelun kuvaus</h2>
+  <p>Palvelu mahdollistaa seuraavat toiminnot:</p>
+  <ul>
+    <li><strong>Etäkonsultaatio chatissa</strong> – kuvaat tilanteesi ja saat
+    hammaslääkäriltä kirjallisen arvion sekä jatko-ohjeet.</li>
+    <li><strong>Valokuva-arvio</strong> – voit lähettää valokuvia suun alueesta arvion
+    tueksi.</li>
+    <li><strong>Sähköinen resepti (e-resepti)</strong> – hammaslääkäri voi tarvittaessa ja
+    oman lääketieteellisen harkintansa mukaan kirjoittaa e-reseptin (kohta 7).</li>
+  </ul>
+  <div class="alert">
+    <p style="margin:0"><strong>Palvelu ei ole päivystys- eikä hätäpalvelu.</strong>
+    Palvelu ei korvaa kiireellistä hoitoa eikä fyysistä tutkimusta vastaanotolla.
+    Hakeudu välittömästi vastaanotolle tai päivystykseen taikka soita hätänumeroon
+    <strong>112</strong>, jos sinulla on esimerkiksi voimakas turvotus, joka vaikeuttaa
+    hengitystä tai nielemistä, korkea kuume yhdessä suun tai kasvojen turvotuksen kanssa,
+    runsas tyrehtymätön verenvuoto tai välitöntä hoitoa vaativa vamma.</p>
+  </div>
+  <p>Etäkonsultaatio perustuu Käyttäjän antamiin tietoihin ja kuviin. Hammaslääkäri arvioi
+  tapauskohtaisesti, voidaanko tilanne hoitaa etänä, ja voi aina suositella tai edellyttää
+  käyntiä vastaanotolla. Palvelu ei takaa, että diagnoosi tai hoito voidaan antaa
+  etäyhteyden välityksellä.</p>
+
+  <h2>4. Käyttäjän edellytykset ja tunnistautuminen</h2>
+  <p>Palvelun käyttö edellyttää, että olet täysi-ikäinen (18 vuotta täyttänyt).
+  Alaikäistä koskevissa asioissa Palvelua käyttää huoltaja.
+  <span class="note">[Tarkista: tarjotaanko alaikäisten hoitoa, ja miten huoltajan
+  suostumus / lapsen itsemääräämisoikeus huomioidaan.]</span></p>
+  <p>Käyttäjä tunnistautuu Palveluun vahvalla sähköisellä tunnistautumisella
+  (pankkitunnukset tai vastaava). Tunnistautuminen on edellytys terveydenhuollon palvelun
+  antamiselle ja potilastietojen asianmukaiselle kirjaamiselle.</p>
+  <p>Käyttäjä vastaa antamiensa tietojen oikeellisuudesta ja siitä, ettei luovuta
+  tunnuksiaan ulkopuolisille.</p>
+
+  <h2>5. Käyttäjän velvollisuudet</h2>
+  <p>Sitoudut antamaan terveydentilastasi oikeat ja riittävät tiedot sekä toimittamaan
+  mahdollisimman selkeät valokuvat, jotta hammaslääkäri voi tehdä arvion. Et saa käyttää
+  Palvelua lainvastaiseen tarkoitukseen, toimittaa toisen henkilön tietoja ilman
+  valtuutusta etkä häiritä Palvelun toimintaa. Ymmärrät, että puutteelliset tai
+  virheelliset tiedot voivat vaikuttaa arvion luotettavuuteen.</p>
+
+  <h2>6. Lääketieteellinen vastuu ja palvelun rajoitukset</h2>
+  <p>Etäkonsultaatiossa annettu arvio perustuu yksinomaan Käyttäjän toimittamiin tietoihin
+  ja kuviin eikä korvaa kliinistä tutkimusta, röntgenkuvausta tai muita vastaanotolla
+  tehtäviä tutkimuksia. Hammaslääkäri noudattaa hyvää hoitokäytäntöä ja terveydenhuollon
+  ammattihenkilöitä koskevaa lainsäädäntöä, ja hänellä on aina oikeus jättää arvio antamatta
+  tai ohjata Käyttäjä vastaanotolle. Käyttäjä vastaa annettujen ohjeiden noudattamisesta ja
+  jatkohoitoon hakeutumisesta, jos oireet jatkuvat tai pahenevat.</p>
+
+  <h2>7. Reseptit</h2>
+  <p>Hammaslääkäri voi kirjoittaa e-reseptin oman lääketieteellisen harkintansa mukaan, jos
+  se on potilasturvallista ja lainsäädännön mukaista. Resepti tallennetaan Reseptikeskukseen
+  (Kanta-palvelut). Palvelu ei takaa reseptin saamista. Tiettyjä lääkkeitä (esimerkiksi
+  pääasiassa keskushermostoon vaikuttavat lääkkeet (PKV) ja huumausaineita sisältävät
+  valmisteet) ei pääsääntöisesti määrätä etävastaanotolla.
+  <span class="note">[Tarkista voimassa olevat reseptien etämääräämistä koskevat
+  viranomaisohjeet (Fimea/Valvira).]</span></p>
+
+  <h2>8. Hinnat ja maksaminen</h2>
+  <p>Sovelluksen lataaminen on maksutonta. Maksu peritään vasta etävastaanoton
+  (etäkonsultaation) varaamisesta. Etäkonsultaation hinta on
+  <span class="fill">[35]</span> euroa. Voimassa oleva hinnasto esitetään Palvelussa ennen
+  maksun vahvistamista.</p>
+  <p>Maksaminen tapahtuu Palvelussa tarjotuilla maksutavoilla maksunvälittäjän
+  (<span class="fill">[maksunvälittäjä]</span>) kautta. Maksunvälittäjän omat ehdot voivat
+  täydentää näitä ehtoja.</p>
+  <p class="note">[Arvonlisävero: terveyden- ja sairaanhoitopalvelut ovat pääsääntöisesti
+  arvonlisäverottomia (AVL 34–36 §). Tarkista verokohtelu ja mainitse hintojen sisältämä
+  mahdollinen alv.]</p>
+
+  <h2>9. Peruuttamisoikeus ja tyytyväisyystakuu</h2>
+  <p>Kuluttajalla on lähtökohtaisesti kuluttajansuojalain mukainen 14 vuorokauden
+  peruuttamisoikeus etänä tehdyssä sopimuksessa. Kun pyydät palvelun suorittamista
+  (etäkonsultaation aloittamista) heti, annat samalla suostumuksesi siihen, että palvelu
+  voidaan suorittaa peruuttamisajan kuluessa. Kun palvelu on kokonaan suoritettu,
+  peruuttamisoikeutta ei enää ole.
+  <span class="note">[Tarkista kuluttajansuojalain 6 luvun mukainen menettely ja se, miten
+  suostumus ja peruuttamisoikeuden menettämistä koskeva ilmoitus toteutetaan
+  Palvelussa.]</span></p>
+  <p><strong>Tyytyväisyystakuu:</strong> jos et koe konsultaatiota hyödylliseksi,
+  palautamme maksamasi <span class="fill">[35]</span> euroa – ilman kysymyksiä. Takuu on
+  Palveluntarjoajan vapaaehtoinen lupaus eikä rajoita Käyttäjän lakisääteisiä oikeuksia.</p>
+
+  <h2>10. Henkilötietojen käsittely ja potilastiedot</h2>
+  <p>Palvelussa käsitellään terveydentilaa koskevia tietoja, jotka ovat tietosuoja-asetuksen
+  tarkoittamia erityisiä henkilötietoryhmiä. Rekisterinpitäjänä toimii Acar &amp; Högman Oy.
+  Käyttäjän terveystiedot kirjataan potilasrekisteriin lainsäädännön edellyttämällä tavalla,
+  ja niitä koskee terveydenhuollon salassapitovelvollisuus.</p>
+  <p>Henkilötietojen käsittelystä, säilytysajoista ja rekisteröidyn oikeuksista kerrotaan
+  tarkemmin tietosuojaselosteessa: <a href="#" class="fill">[linkki
+  tietosuojaselosteeseen]</a>. Tietojen käytöstä Palvelun ja tekoälyominaisuuksien
+  kehittämiseen kerrotaan kohdassa 11.</p>
+
+  <h2>11. Tietojen käyttö palvelun ja tekoälyn kehittämiseen</h2>
+  <p>Palveluntarjoaja kehittää Palvelua, mukaan lukien tekoälypohjaista kuva-analyysiä,
+  joka tukee hammaslääkärin työtä. Kehitystyössä voidaan hyödyntää valokuvista tehtyjä
+  havaintoja ja niihin liittyvää aineistoa muun muassa tekoälyn konenäön (computer vision)
+  opettamiseen ja Palvelun laadun parantamiseen.</p>
+  <p>Kehityskäyttöön käytettävä aineisto <strong>anonymisoidaan</strong> siten, ettei siitä
+  voida suoraan tai epäsuorasti tunnistaa yksittäistä henkilöä. Tunnistetiedot poistetaan
+  ennen aineiston käyttöä kehitystarkoituksiin. Aidosti anonymisoituun aineistoon, josta
+  henkilöä ei voida tunnistaa, ei sovelleta tietosuoja-asetusta.</p>
+  <div class="note">
+    <p style="margin:0 0 8px">[Tarkista: kuvien aito anonymisointi on oikeudellisesti
+    vaativaa. Mikäli aineisto on vain pseudonymisoitua, kyse on edelleen henkilötiedoista
+    ja terveystiedoista, jolloin tarvitaan pätevä käsittelyperuste – käytännössä useimmiten
+    Käyttäjän <strong>nimenomainen, erikseen annettava suostumus</strong> sekä mahdollisesti
+    sosiaali- ja terveystietojen toissijaista käyttöä koskevan lain (toisiolaki) ja
+    Findatan mukainen menettely. DPO:n/lakimiehen vahvistettava ennen käyttöönottoa.]</p>
+    <p style="margin:0">[Suositus: toteuta tekoälyn kehityskäyttöä koskeva suostumus
+    erillisenä, vapaaehtoisena valintana (opt-in), joka on erotettu näiden käyttöehtojen
+    hyväksymisestä, ja jonka Käyttäjä voi peruuttaa milloin tahansa.]</p>
+  </div>
+
+  <h2>12. Immateriaalioikeudet</h2>
+  <p>Palvelu ja sen sisältö (pois lukien Käyttäjän oma Sisältö) sekä niihin liittyvät
+  tavaramerkit ja tekijänoikeudet kuuluvat Palveluntarjoajalle tai Hammashelpille taikka
+  niiden lisenssinantajille. Käyttäjä saa Palveluun rajoitetun, henkilökohtaisen ja
+  ei-siirrettävän käyttöoikeuden. Käyttäjä säilyttää oikeudet omaan Sisältöönsä ja myöntää
+  Palveluntarjoajalle oikeuden käsitellä Sisältöä Palvelun tuottamiseksi sekä kohdan 11
+  mukaisesti.</p>
+
+  <h2>13. Vastuunrajoitukset</h2>
+  <p>Palvelu tarjotaan "sellaisena kuin se on". Palveluntarjoaja ei vastaa Palvelun
+  keskeytyksettömästä tai virheettömästä toiminnasta eikä vahingosta, joka aiheutuu
+  Käyttäjän antamista virheellisistä tai puutteellisista tiedoista taikka annettujen
+  ohjeiden noudattamatta jättämisestä. Mikään näissä ehdoissa ei rajoita vastuuta, jota ei
+  voida pätevästi rajoittaa pakottavan lainsäädännön nojalla, mukaan lukien potilasvahinkoja
+  koskeva vastuu (kohta 14) sekä kuluttajan oikeudet.</p>
+
+  <h2>14. Potilasvakuutus, muistutukset ja valitukset</h2>
+  <p>Palveluntarjoajalla on lakisääteinen potilasvakuutus. Potilasvahingon sattuessa
+  korvausta voi hakea Potilasvakuutuskeskukselta.
+  <span class="note">[Vahvista potilasvakuutuksen voimassaolo ja vakuutuksenantaja.]</span></p>
+  <p>Hoitoon tai kohteluun tyytymätön voi tehdä <strong>muistutuksen</strong>
+  Palveluntarjoajalle. Käyttäjää voi neuvoa <strong>potilasasiamies</strong>
+  <span class="fill">[potilasasiamiehen yhteystiedot]</span>. Terveydenhuollon valvonnasta
+  vastaavat aluehallintovirasto (AVI) ja Valvira. Kuluttaja-asiana erimielisyyden voi
+  saattaa <strong>kuluttajariitalautakunnan</strong> käsiteltäväksi; ennen sitä voit olla
+  yhteydessä <strong>kuluttajaneuvontaan</strong>.</p>
+
+  <h2>15. Palvelun saatavuus, muutokset ja keskeytykset</h2>
+  <p>Palveluntarjoaja pyrkii pitämään Palvelun käytettävissä jatkuvasti, mutta voi
+  keskeyttää Palvelun esimerkiksi huolto-, päivitys- tai tietoturvasyistä. Palveluntarjoaja
+  voi kehittää, muuttaa tai lopettaa Palvelun tai sen osan. Olennaisista muutoksista
+  pyritään ilmoittamaan Käyttäjälle etukäteen.</p>
+
+  <h2>16. Käyttöehtojen muuttaminen</h2>
+  <p>Palveluntarjoaja voi muuttaa näitä käyttöehtoja. Muutoksista ilmoitetaan Palvelussa tai
+  muutoin Käyttäjälle. Jatkamalla Palvelun käyttöä muutosten jälkeen Käyttäjä hyväksyy
+  muuttuneet ehdot. Voimassa oleva versio on aina saatavilla Palvelussa.</p>
+
+  <h2>17. Sovellettava laki ja riidanratkaisu</h2>
+  <p>Näihin ehtoihin ja Palveluun sovelletaan Suomen lakia. Erimielisyydet pyritään
+  ratkaisemaan ensisijaisesti neuvottelemalla. Kuluttaja voi nostaa kanteen kotipaikkansa
+  käräjäoikeudessa ja saattaa asian kuluttajariitalautakunnan käsiteltäväksi (kohta 14).</p>
+
+  <h2>18. Yhteystiedot</h2>
+  <div class="contact-card">
+    <div><strong>Acar &amp; Högman Oy</strong></div>
+    <div>Y-tunnus: <span class="fill">[Y-tunnus]</span></div>
+    <div>Osoite: <span class="fill">[osoite]</span></div>
+    <div>Sähköposti: <span class="fill">[sähköposti]</span></div>
+    <div>Vastaava hammaslääkäri: <span class="fill">[Etunimi Sukunimi]</span></div>
+  </div>
+</main>
+
+<footer>
+  Hammashelppi · Suomessa laillistettujen hammaslääkärien palvelu, Valviran valvonnan alainen ·
+  <a href="/">Etusivulle</a>
+</footer>
+
+</body>
+</html>
