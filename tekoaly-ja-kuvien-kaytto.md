@@ -12,8 +12,10 @@
 
 ## Lyhyesti
 
-Kehitämme Palvelua ja sitä tukevaa tekoälypohjaista kuva-analyysiä. Tämä auttaa
-hammaslääkäriä tunnistamaan löydöksiä kuvista nopeammin ja luotettavammin.
+Kehitämme Palvelua ja siihen liittyvää tekoälypohjaista kuva-analyysiä. Se antaa
+asiakkaalle alustavan arvion siitä, onko todennäköistä syytä ottaa yhteyttä
+hammaslääkäriin. Tekoäly ei tee diagnoosia eikä hoitopäätöksiä eikä ohjaa hammaslääkärin
+työtä.
 
 Kehitystyössä voimme käyttää valokuvista tehtyjä löydöksiä ja kuva-aineistoa muun muassa
 tekoälyn konenäön opettamiseen. **Aineisto käsitellään niin, ettei siitä voi tunnistaa

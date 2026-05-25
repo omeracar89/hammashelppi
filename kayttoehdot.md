@@ -182,9 +182,11 @@ kerrotaan tarkemmin **tietosuojaselosteessa**: https://hammashelppi.fi/tietosuoj
 ## 11. Tietojen käyttö palvelun ja tekoälyn kehittämiseen
 
 11.1. Palveluntarjoaja kehittää Palvelua, mukaan lukien tekoälypohjaista kuva-analyysiä,
-joka tukee hammaslääkärin työtä. Kehitystyössä voidaan hyödyntää valokuvista tehtyjä
-havaintoja ja niihin liittyvää aineistoa muun muassa tekoälyn konenäön (computer vision)
-opettamiseen ja Palvelun laadun parantamiseen.
+joka antaa Käyttäjälle alustavan, ei-sitovan arvion siitä, onko todennäköistä syytä ottaa
+yhteyttä hammaslääkäriin. Tekoäly ei tee diagnoosia eikä hoitopäätöksiä eikä ohjaa
+hammaslääkärin työtä. Kehitystyössä voidaan hyödyntää valokuvista tehtyjä havaintoja ja
+niihin liittyvää aineistoa muun muassa tekoälyn konenäön (computer vision) opettamiseen ja
+Palvelun laadun parantamiseen.
 
 11.2. Kehityskäyttöön käytettävä aineisto **anonymisoidaan** siten, ettei siitä voida
 suoraan tai epäsuorasti tunnistaa yksittäistä henkilöä. Tunnistetiedot poistetaan ennen

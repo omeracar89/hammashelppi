@@ -118,10 +118,14 @@ sitoo salassapitovelvollisuus.
 
 ## 12. Automaattinen päätöksenteko ja profilointi
 
-Palvelussa ei tehdä Käyttäjää koskevia hoitopäätöksiä yksinomaan automaattisen
-käsittelyn perusteella. Hoitoa koskevan arvion tekee aina laillistettu hammaslääkäri.
-Tekoälyavusteinen kuva-analyysi toimii hammaslääkärin työn tukena, ei itsenäisenä
-päätöksentekijänä.
+Tekoälypohjainen kuva-analyysi voi antaa Käyttäjälle alustavan, ei-sitovan arvion siitä,
+onko todennäköistä syytä ottaa yhteyttä hammaslääkäriin. Arvio on ainoastaan ohjeellinen
+eikä se ole diagnoosi tai hoitopäätös; varsinaisen arvion tekee aina laillistettu
+hammaslääkäri, ja Käyttäjä päättää itse jatkotoimista. Palvelussa ei tehdä Käyttäjään
+kohdistuvia oikeudellisia tai vastaavalla tavalla merkittäviä vaikutuksia aiheuttavia
+päätöksiä yksinomaan automaattisen käsittelyn perusteella.
+[Tarkista tietosuojavastaavan kanssa GDPR 22 art. soveltuvuus, kun tekoäly antaa
+asiakkaalle automaattisen arvion.]
 
 ## 13. Tietojen käyttö palvelun ja tekoälyn kehittämiseen
 
