@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Tietosuojaseloste – Hammashelppi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#2E86C1;--blue-dark:#1A6FA8;--blue-light:#EAF4FB;--blue-mid:#BADAF0;
+    --white:#FFFFFF;--bg:#F4F8FF;--ink:#1A2233;--ink-soft:#5A6478;--accent:#00B894;
+    --rule:#D6E4F7;--radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:var(--blue);}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--rule);}
+  .nav-logo{font-family:'DM Serif Display',serif;font-size:21px;color:var(--blue);letter-spacing:-0.4px;text-decoration:none;}
+  .nav-back{font-size:14px;color:var(--ink-soft);text-decoration:none;}
+  .nav-back:hover{color:var(--blue);}
+
+  .legal{max-width:780px;margin:0 auto;padding:56px 24px 80px;}
+  .legal-head h1{font-family:'DM Serif Display',serif;font-size:40px;letter-spacing:-1px;line-height:1.1;margin-bottom:14px;}
+  .legal-meta{font-size:13px;color:var(--ink-soft);margin-bottom:28px;}
+  .legal-meta span{display:inline-block;margin-right:18px;}
+
+  .draft-banner{background:#FFF7E6;border:1px solid #F0C36D;border-radius:var(--radius);padding:16px 18px;font-size:14px;color:#5a4a1f;line-height:1.55;margin-bottom:36px;}
+  .draft-banner strong{color:#7a5c12;}
+
+  .legal h2{font-size:21px;letter-spacing:-.3px;margin:40px 0 12px;padding-top:8px;border-top:1px solid var(--rule);}
+  .legal h2:first-of-type{border-top:none;padding-top:0;}
+  .legal p{margin:0 0 14px;color:#2a3343;}
+  .legal ul{margin:0 0 16px 22px;}
+  .legal li{margin-bottom:8px;}
+  .legal .fill{background:var(--blue-light);border-bottom:1px dashed var(--blue-mid);padding:0 3px;border-radius:3px;color:var(--blue-dark);font-size:.95em;}
+  .legal .note{background:var(--bg);border-left:3px solid var(--blue-mid);border-radius:6px;padding:12px 16px;font-size:14px;color:var(--ink-soft);margin:0 0 16px;}
+
+  .contact-card{background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:var(--radius);padding:22px 24px;margin:0 0 8px;font-size:15px;}
+  .contact-card div{margin-bottom:4px;}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.6);padding:28px 48px;text-align:center;font-size:13px;margin-top:40px;}
+  footer a{color:rgba(255,255,255,.7);}
+
+  @media(max-width:640px){
+    nav{padding:14px 20px;}
+    .legal{padding:36px 20px 56px;}
+    .legal-head h1{font-size:30px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Hammashelppi</a>
+  <a href="/" class="nav-back">← Etusivulle</a>
+</nav>
+
+<main class="legal">
+  <div class="legal-head">
+    <h1>Tietosuojaseloste</h1>
+    <div class="legal-meta">
+      <span>Päivitetty viimeksi: 25.5.2026</span>
+      <span>Versio 1.0</span>
+    </div>
+  </div>
+
+  <div class="draft-banner">
+    <strong>Luonnos.</strong> Tämä seloste on työversio, joka tulee tarkistuttaa
+    tietosuojavastaavalla (DPO) ja lakimiehellä ennen julkaisua. Täytettävät kohdat on
+    korostettu.
+  </div>
+
+  <!--
+    SISÄINEN MUISTILISTA – EI JULKAISTA. Tarkistettavat kohdat:
+    - Tietosuojavastaavan nimeäminen ja yhteystiedot
+    - Käsittelijät: hosting/pilvi, tekoälyn kehityskumppanit, DPA-sopimukset
+    - Kolmansiin maihin siirto: Stripe ym. siirtomekanismit (SCC/riittävyyspäätös/DPF)
+    - Säilytysajat: potilasasiakirja-asetus 298/2009 liite
+    - Tekoäly/kuvien käyttö: anonymisointi vs. pseudonymisointi, peruste, opt-in, DPIA
+    - Evästeet: erillinen evästeseloste ja consent-toteutuksen vastaavuus
+    - Kanta-palvelut: liittyminen ja roolit reseptien osalta
+    - Yhdenmukaisuus käyttöehtojen kanssa (kohdat 10, 11, 13)
+  -->
+
+  <h2>1. Rekisterinpitäjä</h2>
+  <div class="contact-card">
+    <div><strong>Acar &amp; Högman Oy</strong></div>
+    <div>Y-tunnus: 2910567-4</div>
+    <div>Osoite: Kouvolankatu 15, 45100 Kouvola</div>
+    <div>Sähköposti: asiakaspalvelu@hammashelppi.fi</div>
+    <div>Terveydenhuollon vastuuhenkilö: Tomas Högman</div>
+  </div>
+  <p>Hammashelppi toimii palvelualustan ylläpitäjänä ja kehittäjänä.</p>
+
+  <h2>2. Tietosuoja-asioiden yhteyshenkilö ja tietosuojavastaava</h2>
+  <p>Tietosuoja-asioissa voit olla yhteydessä: asiakaspalvelu@hammashelppi.fi.</p>
+  <p>Tietosuojavastaava (DPO): <span class="fill">[nimi ja yhteystiedot]</span>.</p>
+  <p class="note">[Tarkista: terveystietojen laajamittainen käsittely edellyttää
+  todennäköisesti tietosuojavastaavan nimeämistä (GDPR 37 art.).]</p>
+
+  <h2>3. Rekisterin nimi</h2>
+  <p>Hammashelppi-palvelun asiakas- ja potilasrekisteri.</p>
+
+  <h2>4. Henkilötietojen käsittelyn tarkoitukset</h2>
+  <ul>
+    <li>etähammaslääkäripalvelun (etäkonsultaatio, valokuva-arvio, e-resepti) tuottaminen,</li>
+    <li>potilasturvallisuuden varmistaminen ja hoidon dokumentointi potilasasiakirjoihin,</li>
+    <li>asiakassuhteen hoito, viestintä ja asiakaspalvelu,</li>
+    <li>maksujen käsittely ja kirjanpito,</li>
+    <li>palvelun toiminnan, tietoturvan ja laadun varmistaminen,</li>
+    <li>lakisääteisten velvoitteiden täyttäminen, sekä</li>
+    <li>palvelun ja tekoälyavusteisen kuva-analyysin kehittäminen (kohta 13, perustuu
+    suostumukseen).</li>
+  </ul>
+
+  <h2>5. Käsiteltävät henkilötietoryhmät</h2>
+  <ul>
+    <li><strong>Tunnistetiedot:</strong> nimi, henkilötunnus, vahvan tunnistautumisen tiedot.</li>
+    <li><strong>Yhteystiedot:</strong> sähköposti, puhelinnumero.</li>
+    <li><strong>Terveystiedot (erityinen henkilötietoryhmä):</strong> oirekuvaukset,
+    hammaslääkärin arvio, hoito-ohjeet, reseptitiedot ja muut potilasasiakirjoihin
+    kirjattavat tiedot.</li>
+    <li><strong>Valokuvat:</strong> Käyttäjän lähettämät kuvat suun alueesta.</li>
+    <li><strong>Viestit:</strong> chat-keskustelut hammaslääkärin kanssa.</li>
+    <li><strong>Maksutiedot:</strong> maksutapahtumiin liittyvät tiedot (maksukortin tietoja
+    käsittelee maksunvälittäjä, emme tallenna kortin täydellisiä tietoja).</li>
+    <li><strong>Tekniset tiedot:</strong> laite- ja lokitiedot, evästetiedot (kohta 14).</li>
+  </ul>
+
+  <h2>6. Käsittelyn oikeusperusteet</h2>
+  <ul>
+    <li><strong>Terveydenhuollon palvelu ja potilasasiakirjat:</strong> GDPR 9 art. 2 h
+    (terveyden- ja sairaanhoidon tarpeet; käsittely terveydenhuollon ammattihenkilön
+    vastuulla ja salassapitovelvollisuuden alaisena) sekä terveydenhuollon lainsäädäntö.</li>
+    <li><strong>Sopimuksen täytäntöönpano:</strong> GDPR 6 art. 1 b.</li>
+    <li><strong>Lakisääteinen velvoite:</strong> GDPR 6 art. 1 c (mm. potilasasiakirjojen ja
+    kirjanpidon säilyttäminen).</li>
+    <li><strong>Suostumus:</strong> GDPR 6 art. 1 a ja 9 art. 2 a (palvelun ja tekoälyn
+    kehittäminen, kohta 13; evästeet, kohta 14). Suostumuksen voi peruuttaa milloin
+    tahansa.</li>
+  </ul>
+
+  <h2>7. Mistä tiedot saadaan</h2>
+  <p>Tiedot saadaan pääasiassa Käyttäjältä itseltään (rekisteröityminen, tunnistautuminen,
+  oirekuvaukset, kuvat, viestit). Tunnistautumistiedot saadaan vahvan tunnistautumisen
+  palveluntarjoajalta. Reseptitietoja voidaan käsitellä Kanta-palvelujen kautta.</p>
+
+  <h2>8. Henkilötietojen vastaanottajat ja käsittelijät</h2>
+  <p>Tietoja käsittelevät rekisterinpitäjän lukuun seuraavat tahot (henkilötietojen
+  käsittelijät), asianmukaisin käsittelysopimuksin:</p>
+  <ul>
+    <li><strong>Maksunvälitys:</strong> Stripe (maksutapahtumien käsittely).</li>
+    <li><strong>Palvelun tekninen alusta ja tallennus:</strong>
+    <span class="fill">[pilvipalvelu-/hosting-toimittaja]</span>.</li>
+    <li><strong>Tekoälyn kehittämisen kumppanit:</strong>
+    <span class="fill">[mahdolliset kehityskumppanit]</span> (vain kohdan 13 mukaisesti ja
+    tunnisteettomalla aineistolla).</li>
+  </ul>
+  <p>Lisäksi: <strong>Kanta-palvelut / Reseptikeskus</strong> e-reseptien ja lakisääteisten
+  potilastietojen osalta. Tietoja voidaan luovuttaa viranomaisille lain edellyttämissä
+  tilanteissa. Emme myy henkilötietoja emmekä luovuta niitä markkinointitarkoituksiin.</p>
+
+  <h2>9. Tietojen siirto EU- tai ETA-alueen ulkopuolelle</h2>
+  <p>Pyrimme käsittelemään tiedot EU-/ETA-alueella. Mikäli tietoja siirretään alueen
+  ulkopuolelle (esimerkiksi maksunvälittäjän osalta), siirto perustuu tietosuoja-asetuksen
+  mukaisiin suojatoimiin, kuten Euroopan komission vakiosopimuslausekkeisiin (SCC) tai
+  tietosuojan riittävyyspäätökseen.</p>
+  <p class="note">[Tarkista Stripen ja muiden käsittelijöiden siirtomekanismit ja päivitä
+  tämä kohta.]</p>
+
+  <h2>10. Säilytysajat</h2>
+  <ul>
+    <li><strong>Potilasasiakirjat:</strong> säilytetään potilasasiakirjoista annetun
+    sosiaali- ja terveysministeriön asetuksen (298/2009) mukaiset ajat. Pääsääntöisesti
+    12 vuotta potilaan kuolemasta tai, jos siitä ei ole tietoa, 120 vuotta potilaan
+    syntymästä. <span class="note" style="display:inline-block;margin-top:6px">[Tarkista
+    asiakirjakohtaiset säilytysajat asetuksen liitteestä.]</span></li>
+    <li><strong>Kirjanpitoaineisto:</strong> kirjanpitolain mukainen säilytysaika
+    (pääsääntöisesti 6 vuotta).</li>
+    <li><strong>Muut asiakas- ja tekniset tiedot:</strong> vain niin kauan kuin se on
+    tarpeen käsittelyn tarkoituksen kannalta.</li>
+    <li><strong>Kehittämiskäyttöön anonymisoitu aineisto:</strong> ei sisällä
+    tunnistetietoja eikä siten ole henkilötietoa (kohta 13).</li>
+  </ul>
+
+  <h2>11. Tietojen suojaaminen</h2>
+  <p>Henkilötietoja suojataan asianmukaisin teknisin ja organisatorisin toimenpitein, kuten
+  salatuilla yhteyksillä, pääsynhallinnalla ja käyttöoikeuksien rajaamisella. Terveystietoja
+  käsittelevät vain henkilöt, joilla on siihen työtehtäviensä perusteella oikeus ja joita
+  sitoo salassapitovelvollisuus.</p>
+
+  <h2>12. Automaattinen päätöksenteko ja profilointi</h2>
+  <p>Palvelussa ei tehdä Käyttäjää koskevia hoitopäätöksiä yksinomaan automaattisen
+  käsittelyn perusteella. Hoitoa koskevan arvion tekee aina laillistettu hammaslääkäri.
+  Tekoälyavusteinen kuva-analyysi toimii hammaslääkärin työn tukena, ei itsenäisenä
+  päätöksentekijänä.</p>
+
+  <h2>13. Tietojen käyttö palvelun ja tekoälyn kehittämiseen</h2>
+  <p>Voimme käyttää valokuvista tehtyjä havaintoja ja kuva-aineistoa palvelun ja
+  tekoälyavusteisen kuva-analyysin kehittämiseen. Kehityskäyttöön käytettävä aineisto
+  anonymisoidaan siten, ettei siitä voida tunnistaa yksittäistä henkilöä.</p>
+  <p>Tämä käsittely perustuu Käyttäjän erikseen antamaan suostumukseen, joka on
+  vapaaehtoinen, ei vaikuta hoitoon ja jonka voi peruuttaa milloin tahansa.</p>
+  <p class="note">[Tarkista: kuvien aito anonymisointi on vaativaa; jos aineisto on
+  pseudonymisoitua, kyse on edelleen henkilötiedoista (terveystieto). Käsittelyperuste,
+  mahdollinen toisiolaki/Findata-menettely ja vaikutustenarviointi (DPIA) vahvistettava
+  tietosuojavastaavan kanssa.]</p>
+
+  <h2>14. Evästeet ja verkkoanalytiikka</h2>
+  <p>Verkkosivustolla käytetään evästeitä ja vastaavia tekniikoita. Tilastointiin ja palvelun
+  kehittämiseen käytetään verkkoanalytiikkaa (Google Analytics 4). Analytiikka- ja
+  markkinointievästeiden käyttö perustuu suostumukseen, jonka voit antaa tai evätä sivuston
+  evästeilmoituksesta. Voit myös estää evästeet selaimesi asetuksista.</p>
+  <p class="note">[Tarkista: harkitse erillistä evästeselostetta ja varmista, että
+  suostumuksenhallinta (consent) vastaa tosiasiallista evästeiden käyttöä.]</p>
+
+  <h2>15. Rekisteröidyn oikeudet</h2>
+  <p>Sinulla on oikeus:</p>
+  <ul>
+    <li>saada pääsy tietoihisi (tarkastusoikeus),</li>
+    <li>pyytää virheellisten tietojen oikaisua,</li>
+    <li>pyytää tietojen poistamista (huom. potilasasiakirjoja koskee lakisääteinen
+    säilytysvelvollisuus, joka rajoittaa poisto-oikeutta),</li>
+    <li>pyytää käsittelyn rajoittamista ja vastustaa käsittelyä,</li>
+    <li>saada suostumukseen perustuvat tiedot siirrettävässä muodossa (siirto-oikeus,
+    soveltuvin osin), sekä</li>
+    <li>peruuttaa antamasi suostumus milloin tahansa (peruutus ei vaikuta ennen sitä tehdyn
+    käsittelyn lainmukaisuuteen).</li>
+  </ul>
+  <p>Oikeuksien käyttämistä koskevat pyynnöt: asiakaspalvelu@hammashelppi.fi.
+  Henkilöllisyytesi voidaan tarvittaessa varmistaa pyynnön käsittelemiseksi.</p>
+
+  <h2>16. Oikeus tehdä valitus valvontaviranomaiselle</h2>
+  <p>Sinulla on oikeus tehdä valitus tietosuojavaltuutetun toimistolle, jos katsot, että
+  henkilötietojesi käsittely ei ole tietosuojalainsäädännön mukaista. Lisätietoja:
+  tietosuoja.fi.</p>
+
+  <h2>17. Muutokset tietosuojaselosteeseen</h2>
+  <p>Voimme päivittää tätä tietosuojaselostetta. Ajantasainen versio on aina saatavilla
+  Palvelussa. Olennaisista muutoksista pyritään ilmoittamaan Käyttäjälle.</p>
+</main>
+
+<footer>
+  Hammashelppi · Suomessa laillistettujen hammaslääkärien palvelu, Valviran valvonnan alainen ·
+  <a href="/kayttoehdot.html">Käyttöehdot</a>
+</footer>
+
+</body>
+</html>

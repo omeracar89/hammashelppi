@@ -173,7 +173,7 @@ tarkoittamia erityisiä henkilötietoryhmiä. Rekisterinpitäjänä toimii Acar 
 tavalla, ja niitä koskee terveydenhuollon salassapitovelvollisuus.
 
 10.3. Henkilötietojen käsittelystä, tietojen säilytysajoista ja rekisteröidyn oikeuksista
-kerrotaan tarkemmin **tietosuojaselosteessa**: [linkki tietosuojaselosteeseen].
+kerrotaan tarkemmin **tietosuojaselosteessa**: https://hammashelppi.fi/tietosuojaseloste.html.
 
 10.4. Tietojen käytöstä Palvelun ja tekoälyominaisuuksien kehittämiseen kerrotaan kohdassa 11.
 
@@ -294,8 +294,9 @@ Vastaava hammaslääkäri: Tomas Högman
       julkisista lähteistä — tarkista viralliset rekisteritiedot).
 - [x] **Vastaava hammaslääkäri / terveydenhuollon vastuuhenkilö:** Tomas Högman
       (tarkista, että vastaa Valviralle/AVI:lle ilmoitettua vastuuhenkilöä).
-- [ ] **Vielä täytettävät kohdat:** tietosuojaselosteen linkki (kohta 10.3) sekä
-      potilasasiamiehen tarkat yhteystiedot (puhelin/verkko-osoite).
+- [ ] **Vielä täytettävät kohdat:** potilasasiamiehen tarkat yhteystiedot
+      (puhelin/verkko-osoite). Tietosuojaseloste on laadittu erikseen
+      (tietosuojaseloste.html) ja linkitetty kohtaan 10.3.
 - [ ] **Terveyspalvelun tuottajan rekisteröinti:** yksityisen terveydenhuollon
       palveluntuottajan lupa/ilmoitus (AVI/Valvira, Soteri-rekisteri).
 - [ ] **Potilasvakuutus:** vakuutuksenantaja ja voimassaolo.
