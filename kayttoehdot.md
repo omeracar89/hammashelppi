@@ -27,7 +27,7 @@ toimivat laillistetut hammaslääkärit.
 
 1.3. **Hammashelppi** toimii palvelualustan ylläpitäjänä ja kehittäjänä.
 
-1.4. Vastaava hammaslääkäri (terveydenhuollon vastuuhenkilö): Ömer Acar.
+1.4. Vastaava hammaslääkäri (terveydenhuollon vastuuhenkilö): Tomas Högman.
 
 1.5. Hyväksymällä nämä käyttöehdot ja ottamalla Palvelun käyttöön käyttäjä (jäljempänä
 **"Käyttäjä"** tai **"sinä"**) sitoutuu noudattamaan näitä ehtoja. Jos et hyväksy ehtoja,
@@ -141,9 +141,9 @@ ennen maksun vahvistamista.
 8.3. Maksaminen tapahtuu Palvelussa tarjotuilla maksutavoilla maksunvälittäjän
 ([maksunvälittäjä]) kautta. Maksunvälittäjän omat ehdot voivat täydentää näitä ehtoja.
 
-8.4. [Arvonlisävero: terveyden- ja sairaanhoitopalvelut ovat pääsääntöisesti
-arvonlisäverottomia (AVL 34–36 §). Tarkista verokohtelu ja mainitse hintojen
-sisältämä mahdollinen alv.]
+8.4. Palvelu on terveyden- ja sairaanhoitopalveluna arvonlisäveroton
+(arvonlisäverolaki 34–36 §). Ilmoitetut hinnat ovat lopullisia, eikä niihin lisätä
+arvonlisäveroa.
 
 ---
 
@@ -282,7 +282,7 @@ käsiteltäväksi (kohta 14.4).
 Y-tunnus: 2910567-4
 Osoite: Kouvolankatu 15, 45100 Kouvola
 Sähköposti: asiakaspalvelu@hammashelppi.fi
-Vastaava hammaslääkäri: Ömer Acar
+Vastaava hammaslääkäri: Tomas Högman
 
 ---
 
@@ -291,9 +291,8 @@ Vastaava hammaslääkäri: Ömer Acar
 - [x] **Yritys- ja rekisteritiedot:** Y-tunnus 2910567-4, osoite Kouvolankatu 15,
       45100 Kouvola, sähköposti asiakaspalvelu@hammashelppi.fi (täydennetty
       julkisista lähteistä — tarkista viralliset rekisteritiedot).
-- [ ] **Vastaava hammaslääkäri / terveydenhuollon vastuuhenkilö:** merkitty Ömer Acar
-      — vahvista, kuka on Valviralle/AVI:lle ilmoitettu vastuuhenkilö (Ömer Acar vai
-      Tomas Högman).
+- [x] **Vastaava hammaslääkäri / terveydenhuollon vastuuhenkilö:** Tomas Högman
+      (tarkista, että vastaa Valviralle/AVI:lle ilmoitettua vastuuhenkilöä).
 - [ ] **Vielä täytettävät kohdat:** voimassaolopäivä, maksunvälittäjä,
       potilasasiamiehen yhteystiedot, tietosuojaselosteen linkki.
 - [ ] **Terveyspalvelun tuottajan rekisteröinti:** yksityisen terveydenhuollon
