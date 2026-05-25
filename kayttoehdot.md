@@ -1,7 +1,7 @@
 # Hammashelppi – Käyttöehdot
 
 **Päivitetty viimeksi:** 25.5.2026
-**Voimassa alkaen:** [pp.kk.vvvv]
+**Voimassa alkaen:** 1.1.2021
 **Versio:** 1.0 (LUONNOS)
 
 > **HUOMAUTUS:** Tämä on työluonnos. Hammashelppi on etäterveydenhuollon palvelu, johon
@@ -139,7 +139,7 @@ koskevat viranomaisohjeet (Fimea/Valvira).]
 ennen maksun vahvistamista.
 
 8.3. Maksaminen tapahtuu Palvelussa tarjotuilla maksutavoilla maksunvälittäjän
-([maksunvälittäjä]) kautta. Maksunvälittäjän omat ehdot voivat täydentää näitä ehtoja.
+(Stripe) kautta. Maksunvälittäjän omat ehdot voivat täydentää näitä ehtoja.
 
 8.4. Palvelu on terveyden- ja sairaanhoitopalveluna arvonlisäveroton
 (arvonlisäverolaki 34–36 §). Ilmoitetut hinnat ovat lopullisia, eikä niihin lisätä
@@ -239,7 +239,8 @@ korvausta voi hakea Potilasvakuutuskeskukselta. [Vahvista potilasvakuutuksen voi
 ja vakuutuksenantaja.]
 
 14.2. Hoitoon tai kohteluun tyytymätön voi tehdä **muistutuksen** Palveluntarjoajalle.
-Käyttäjää voi neuvoa **potilasasiamies** [potilasasiamiehen yhteystiedot].
+Käyttäjää voi neuvoa **potilasasiamies**. Potilasasiamiespalvelut tarjoaa
+Kymenlaakson hyvinvointialue (yhteystiedot hyvinvointialueen verkkosivuilla).
 
 14.3. Terveydenhuollon valvonnasta vastaavat aluehallintovirasto (AVI) ja Valvira.
 
@@ -293,8 +294,8 @@ Vastaava hammaslääkäri: Tomas Högman
       julkisista lähteistä — tarkista viralliset rekisteritiedot).
 - [x] **Vastaava hammaslääkäri / terveydenhuollon vastuuhenkilö:** Tomas Högman
       (tarkista, että vastaa Valviralle/AVI:lle ilmoitettua vastuuhenkilöä).
-- [ ] **Vielä täytettävät kohdat:** voimassaolopäivä, maksunvälittäjä,
-      potilasasiamiehen yhteystiedot, tietosuojaselosteen linkki.
+- [ ] **Vielä täytettävät kohdat:** tietosuojaselosteen linkki (kohta 10.3) sekä
+      potilasasiamiehen tarkat yhteystiedot (puhelin/verkko-osoite).
 - [ ] **Terveyspalvelun tuottajan rekisteröinti:** yksityisen terveydenhuollon
       palveluntuottajan lupa/ilmoitus (AVI/Valvira, Soteri-rekisteri).
 - [ ] **Potilasvakuutus:** vakuutuksenantaja ja voimassaolo.
