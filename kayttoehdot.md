@@ -21,13 +21,13 @@ käyttöön. Palvelu on mobiilisovellus ja siihen liittyvä verkkopalvelu, jonka
 käyttäjä voi olla etäyhteydessä laillistettuun hammaslääkäriin.
 
 1.2. **Terveydenhuollon palveluista vastaava ja potilasrekisterin rekisterinpitäjä** on
-**Acar & Högman Oy** (Y-tunnus [Y-tunnus], osoite [osoite]) (jäljempänä **"Palveluntarjoaja"**).
+**Acar & Högman Oy** (Y-tunnus 2910567-4, osoite Kouvolankatu 15, 45100 Kouvola) (jäljempänä **"Palveluntarjoaja"**).
 Palvelussa annettavasta terveydenhuollosta vastaa Palveluntarjoaja ja sen lukuun
 toimivat laillistetut hammaslääkärit.
 
 1.3. **Hammashelppi** toimii palvelualustan ylläpitäjänä ja kehittäjänä.
 
-1.4. Vastaava hammaslääkäri (terveydenhuollon vastuuhenkilö): [Etunimi Sukunimi].
+1.4. Vastaava hammaslääkäri (terveydenhuollon vastuuhenkilö): Ömer Acar.
 
 1.5. Hyväksymällä nämä käyttöehdot ja ottamalla Palvelun käyttöön käyttäjä (jäljempänä
 **"Käyttäjä"** tai **"sinä"**) sitoutuu noudattamaan näitä ehtoja. Jos et hyväksy ehtoja,
@@ -135,7 +135,7 @@ koskevat viranomaisohjeet (Fimea/Valvira).]
 8.1. Sovelluksen lataaminen on maksutonta. Maksu peritään vasta etävastaanoton
 (etäkonsultaation) varaamisesta.
 
-8.2. Etäkonsultaation hinta on [35] euroa. Voimassa oleva hinnasto esitetään Palvelussa
+8.2. Etäkonsultaation hinta on 35 euroa. Voimassa oleva hinnasto esitetään Palvelussa
 ennen maksun vahvistamista.
 
 8.3. Maksaminen tapahtuu Palvelussa tarjotuilla maksutavoilla maksunvälittäjän
@@ -159,7 +159,7 @@ Kun palvelu on kokonaan suoritettu, peruuttamisoikeutta ei enää ole.
 peruuttamisoikeuden menettämistä koskeva ilmoitus toteutetaan Palvelussa.]
 
 9.3. **Tyytyväisyystakuu:** jos et koe konsultaatiota hyödylliseksi, palautamme
-maksamasi [35] euroa – ilman kysymyksiä. Takuu on Palveluntarjoajan vapaaehtoinen
+maksamasi 35 euroa – ilman kysymyksiä. Takuu on Palveluntarjoajan vapaaehtoinen
 lupaus eikä rajoita Käyttäjän lakisääteisiä oikeuksia.
 
 ---
@@ -279,17 +279,23 @@ käsiteltäväksi (kohta 14.4).
 ## 18. Yhteystiedot
 
 **Acar & Högman Oy**
-Y-tunnus: [Y-tunnus]
-Osoite: [osoite]
-Sähköposti: [sähköposti]
-Vastaava hammaslääkäri: [Etunimi Sukunimi]
+Y-tunnus: 2910567-4
+Osoite: Kouvolankatu 15, 45100 Kouvola
+Sähköposti: asiakaspalvelu@hammashelppi.fi
+Vastaava hammaslääkäri: Ömer Acar
 
 ---
 
 ## Tarkistettavat kohdat (ei julkaista – muistilista)
 
-- [ ] **Yritys- ja rekisteritiedot:** Y-tunnus, osoite, vastaava hammaslääkäri,
-      yhteystiedot.
+- [x] **Yritys- ja rekisteritiedot:** Y-tunnus 2910567-4, osoite Kouvolankatu 15,
+      45100 Kouvola, sähköposti asiakaspalvelu@hammashelppi.fi (täydennetty
+      julkisista lähteistä — tarkista viralliset rekisteritiedot).
+- [ ] **Vastaava hammaslääkäri / terveydenhuollon vastuuhenkilö:** merkitty Ömer Acar
+      — vahvista, kuka on Valviralle/AVI:lle ilmoitettu vastuuhenkilö (Ömer Acar vai
+      Tomas Högman).
+- [ ] **Vielä täytettävät kohdat:** voimassaolopäivä, maksunvälittäjä,
+      potilasasiamiehen yhteystiedot, tietosuojaselosteen linkki.
 - [ ] **Terveyspalvelun tuottajan rekisteröinti:** yksityisen terveydenhuollon
       palveluntuottajan lupa/ilmoitus (AVI/Valvira, Soteri-rekisteri).
 - [ ] **Potilasvakuutus:** vakuutuksenantaja ja voimassaolo.
