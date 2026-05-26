@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex">
 <title>Tietosuojaseloste – Hammashelppi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -63,28 +62,10 @@
   <div class="legal-head">
     <h1>Tietosuojaseloste</h1>
     <div class="legal-meta">
-      <span>Päivitetty viimeksi: 25.5.2026</span>
+      <span>Päivitetty viimeksi: 26.5.2026</span>
       <span>Versio 1.0</span>
     </div>
   </div>
-
-  <div class="draft-banner">
-    <strong>Luonnos.</strong> Tämä seloste on työversio, joka tulee tarkistuttaa
-    tietosuojavastaavalla (DPO) ja lakimiehellä ennen julkaisua. Täytettävät kohdat on
-    korostettu.
-  </div>
-
-  <!--
-    SISÄINEN MUISTILISTA – EI JULKAISTA. Tarkistettavat kohdat:
-    - Tietosuojavastaavan nimeäminen ja yhteystiedot
-    - Käsittelijät: hosting/pilvi, tekoälyn kehityskumppanit, DPA-sopimukset
-    - Kolmansiin maihin siirto: Stripe ym. siirtomekanismit (SCC/riittävyyspäätös/DPF)
-    - Säilytysajat: potilasasiakirja-asetus 298/2009 liite
-    - Tekoäly/kuvien käyttö: anonymisointi vs. pseudonymisointi, peruste, opt-in, DPIA
-    - Evästeet: erillinen evästeseloste ja consent-toteutuksen vastaavuus
-    - Kanta-palvelut: liittyminen ja roolit reseptien osalta
-    - Yhdenmukaisuus käyttöehtojen kanssa (kohdat 10, 11, 13)
-  -->
 
   <h2>1. Rekisterinpitäjä</h2>
   <div class="contact-card">
@@ -98,9 +79,7 @@
 
   <h2>2. Tietosuoja-asioiden yhteyshenkilö ja tietosuojavastaava</h2>
   <p>Tietosuoja-asioissa voit olla yhteydessä: asiakaspalvelu@hammashelppi.fi.</p>
-  <p>Tietosuojavastaava (DPO): <span class="fill">[nimi ja yhteystiedot]</span>.</p>
-  <p class="note">[Tarkista: terveystietojen laajamittainen käsittely edellyttää
-  todennäköisesti tietosuojavastaavan nimeämistä (GDPR 37 art.).]</p>
+  <p>Tietosuojavastaava (DPO): Ömer Acar, omer@hammashelppi.fi.</p>
 
   <h2>3. Rekisterin nimi</h2>
   <p>Hammashelppi-palvelun asiakas- ja potilasrekisteri.</p>
@@ -156,9 +135,9 @@
     <li><strong>Maksunvälitys:</strong> Stripe (maksutapahtumien käsittely).</li>
     <li><strong>Palvelun tekninen alusta ja tallennus:</strong> Amazon Web Services (AWS);
     palvelininfrastruktuuri sijaitsee EU-alueella.</li>
-    <li><strong>Tekoälyn kehittämisen kumppanit:</strong>
-    <span class="fill">[mahdolliset kehityskumppanit]</span> (vain kohdan 13 mukaisesti ja
-    tunnisteettomalla aineistolla).</li>
+    <li><strong>Palvelun kehittämiseen mahdollisesti osallistuvat kumppanit:</strong>
+    asianmukaisin henkilötietojen käsittelysopimuksin ja vain kohdan 13 mukaisesti
+    tunnisteettomalla aineistolla.</li>
   </ul>
   <p>Lisäksi: <strong>Kanta-palvelut / Reseptikeskus</strong> e-reseptien ja lakisääteisten
   potilastietojen osalta. Tietoja voidaan luovuttaa viranomaisille lain edellyttämissä
@@ -171,16 +150,13 @@
   maksunvälittäjän osalta), siirto perustuu tietosuoja-asetuksen mukaisiin suojatoimiin,
   kuten Euroopan komission vakiosopimuslausekkeisiin (SCC) tai tietosuojan
   riittävyyspäätökseen.</p>
-  <p class="note">[Tarkista Stripen ja muiden käsittelijöiden siirtomekanismit ja päivitä
-  tämä kohta.]</p>
 
   <h2>10. Säilytysajat</h2>
   <ul>
     <li><strong>Potilasasiakirjat:</strong> säilytetään potilasasiakirjoista annetun
     sosiaali- ja terveysministeriön asetuksen (298/2009) mukaiset ajat. Pääsääntöisesti
     12 vuotta potilaan kuolemasta tai, jos siitä ei ole tietoa, 120 vuotta potilaan
-    syntymästä. <span class="note" style="display:inline-block;margin-top:6px">[Tarkista
-    asiakirjakohtaiset säilytysajat asetuksen liitteestä.]</span></li>
+    syntymästä.</li>
     <li><strong>Kirjanpitoaineisto:</strong> kirjanpitolain mukainen säilytysaika
     (pääsääntöisesti 6 vuotta).</li>
     <li><strong>Muut asiakas- ja tekniset tiedot:</strong> vain niin kauan kuin se on
@@ -202,8 +178,6 @@
   laillistettu hammaslääkäri, ja Käyttäjä päättää itse jatkotoimista. Palvelussa ei tehdä
   Käyttäjään kohdistuvia oikeudellisia tai vastaavalla tavalla merkittäviä vaikutuksia
   aiheuttavia päätöksiä yksinomaan automaattisen käsittelyn perusteella.</p>
-  <p class="note">[Tarkista tietosuojavastaavan kanssa GDPR 22 art. soveltuvuus, kun
-  tekoäly antaa asiakkaalle automaattisen arvion.]</p>
 
   <h2>13. Tietojen käyttö palvelun ja tekoälyn kehittämiseen</h2>
   <p>Voimme käyttää valokuvista tehtyjä havaintoja ja kuva-aineistoa palvelun ja
@@ -211,18 +185,12 @@
   anonymisoidaan siten, ettei siitä voida tunnistaa yksittäistä henkilöä.</p>
   <p>Tämä käsittely perustuu Käyttäjän erikseen antamaan suostumukseen, joka on
   vapaaehtoinen, ei vaikuta hoitoon ja jonka voi peruuttaa milloin tahansa.</p>
-  <p class="note">[Tarkista: kuvien aito anonymisointi on vaativaa; jos aineisto on
-  pseudonymisoitua, kyse on edelleen henkilötiedoista (terveystieto). Käsittelyperuste,
-  mahdollinen toisiolaki/Findata-menettely ja vaikutustenarviointi (DPIA) vahvistettava
-  tietosuojavastaavan kanssa.]</p>
 
   <h2>14. Evästeet ja verkkoanalytiikka</h2>
   <p>Verkkosivustolla käytetään evästeitä ja vastaavia tekniikoita. Tilastointiin ja palvelun
   kehittämiseen käytetään verkkoanalytiikkaa (Google Analytics 4). Analytiikka- ja
   markkinointievästeiden käyttö perustuu suostumukseen, jonka voit antaa tai evätä sivuston
   evästeilmoituksesta. Voit myös estää evästeet selaimesi asetuksista.</p>
-  <p class="note">[Tarkista: harkitse erillistä evästeselostetta ja varmista, että
-  suostumuksenhallinta (consent) vastaa tosiasiallista evästeiden käyttöä.]</p>
 
   <h2>15. Rekisteröidyn oikeudet</h2>
   <p>Sinulla on oikeus:</p>

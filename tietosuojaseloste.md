@@ -25,9 +25,11 @@ Hammashelppi toimii palvelualustan ylläpitäjänä ja kehittäjänä.
 
 Tietosuoja-asioissa voit olla yhteydessä: asiakaspalvelu@hammashelppi.fi.
 
-Tietosuojavastaava (DPO): [nimi ja yhteystiedot].
-[Tarkista: terveystietojen laajamittainen käsittely edellyttää todennäköisesti
-tietosuojavastaavan nimeämistä (GDPR 37 art.).]
+Tietosuojavastaava (DPO): Ömer Acar, omer@hammashelppi.fi.
+[Tarkista: tietosuojavastaavan on voitava hoitaa tehtävänsä riippumattomasti, eikä hän saa
+olla henkilö, joka määrittelee henkilötietojen käsittelyn tarkoitukset ja keinot (GDPR 38
+art. 6 kohta). Varmista, ettei DPO-rooli ole ristiriidassa toimitusjohtajan/omistajan
+tehtävien kanssa.]
 
 ## 3. Rekisterin nimi
 
@@ -81,8 +83,9 @@ Tietoja käsittelevät rekisterinpitäjän lukuun seuraavat tahot
 - **Maksunvälitys:** Stripe (maksutapahtumien käsittely).
 - **Palvelun tekninen alusta ja tallennus:** Amazon Web Services (AWS);
   palvelininfrastruktuuri sijaitsee EU-alueella.
-- **Tekoälyn kehittämisen kumppanit:** [mahdolliset kehityskumppanit] (vain kohdan 13
-  mukaisesti ja tunnisteettomalla aineistolla).
+- **Palvelun kehittämiseen mahdollisesti osallistuvat kumppanit:** asianmukaisin
+  henkilötietojen käsittelysopimuksin ja vain kohdan 13 mukaisesti tunnisteettomalla
+  aineistolla.
 
 Lisäksi:
 - **Kanta-palvelut / Reseptikeskus:** e-reseptien ja lakisääteisten potilastietojen osalta.
