@@ -79,7 +79,8 @@ palveluntarjoajalta. Reseptitietoja voidaan käsitellä Kanta-palvelujen kautta.
 Tietoja käsittelevät rekisterinpitäjän lukuun seuraavat tahot
 (henkilötietojen käsittelijät), asianmukaisin käsittelysopimuksin:
 - **Maksunvälitys:** Stripe (maksutapahtumien käsittely).
-- **Palvelun tekninen alusta ja tallennus:** [pilvipalvelu-/hosting-toimittaja].
+- **Palvelun tekninen alusta ja tallennus:** Amazon Web Services (AWS);
+  palvelininfrastruktuuri sijaitsee EU-alueella.
 - **Tekoälyn kehittämisen kumppanit:** [mahdolliset kehityskumppanit] (vain kohdan 13
   mukaisesti ja tunnisteettomalla aineistolla).
 
@@ -91,10 +92,12 @@ Emme myy henkilötietoja emmekä luovuta niitä markkinointitarkoituksiin.
 
 ## 9. Tietojen siirto EU- tai ETA-alueen ulkopuolelle
 
-Pyrimme käsittelemään tiedot EU-/ETA-alueella. Mikäli tietoja siirretään alueen
-ulkopuolelle (esimerkiksi maksunvälittäjän osalta), siirto perustuu tietosuoja-asetuksen
-mukaisiin suojatoimiin, kuten Euroopan komission vakiosopimuslausekkeisiin (SCC) tai
-tietosuojan riittävyyspäätökseen.
+Palvelun palvelininfrastruktuuri sijaitsee EU-alueella (Amazon Web Services), joten
+potilas- ja asiakastiedot säilytetään lähtökohtaisesti EU-/ETA-alueella. Mikäli tietoja
+siirretään yksittäisen käsittelijän osalta alueen ulkopuolelle (esimerkiksi
+maksunvälittäjän osalta), siirto perustuu tietosuoja-asetuksen mukaisiin suojatoimiin,
+kuten Euroopan komission vakiosopimuslausekkeisiin (SCC) tai tietosuojan
+riittävyyspäätökseen.
 [Tarkista Stripen ja muiden käsittelijöiden siirtomekanismit ja päivitä tämä kohta.]
 
 ## 10. Säilytysajat
