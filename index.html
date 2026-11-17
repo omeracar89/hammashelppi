@@ -59,6 +59,9 @@
   .hero{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;padding:120px 48px 72px;gap:64px;max-width:1200px;margin:0 auto;}
   .hero-kicker{font-size:14px;color:var(--ink-soft);margin-bottom:18px;}
   .hero .hero-text h1{font-size:clamp(36px,4.6vw,56px);letter-spacing:-1.2px;margin-bottom:22px;}
+  .hero-points{list-style:none;margin:4px 0 22px;display:grid;gap:12px;max-width:520px;}
+  .hero-points li{font-size:16px;line-height:1.55;color:var(--ink-soft);padding-left:16px;border-left:2px solid var(--blue-mid);}
+  .hero-points strong{color:var(--ink);font-weight:500;}
   .hero-price{font-size:16px;color:var(--ink);margin:6px 0 26px;}
   .hero-price strong{font-size:20px;}
   .hero-facts{list-style:none;margin-top:24px;font-size:14px;color:var(--ink-soft);display:grid;gap:6px;}
@@ -221,6 +224,7 @@
     .doc-also{margin-top:6px;padding-top:0;border-top:none;font-size:12px;}
     .doc-also img{width:22px;height:22px;}
     .hero .hero-sub{font-size:16px;line-height:1.65;}
+    .hero-points li{font-size:15px;}
     .hero-actions{gap:10px;}
     .hero-actions .btn-primary{flex:1;justify-content:center;padding:14px 12px;font-size:15px;}
     .value-inner,section,.testimonials-inner{padding:56px 20px;}
@@ -255,7 +259,12 @@
   <div class="hero-text">
     <p class="hero-kicker">Laillistetut hammaslääkärit · Etävastaanotto kaikkialla Suomessa</p>
     <h1>Kysy hammaslääkäriltä ennen kuin varaat ajan</h1>
-    <p class="hero-sub">Kuvaile vaivasi ja lähetä kuva sovelluksessa, asuitpa missä päin Suomea tahansa. Me <span style="white-space:nowrap">Suu &amp; Hammas -klinikan</span> hammaslääkärit vastaamme yleensä muutamassa tunnissa ja kerromme, tarvitseeko vaiva hoitoa ja kuinka kiireellisesti. Tarvittaessa kirjoitamme e-reseptin tai lausunnon vakuutusyhtiölle.</p>
+    <p class="hero-sub">Kuvaile vaivasi ja lähetä kuva sovelluksessa, asuitpa missä päin Suomea tahansa. Me <span style="white-space:nowrap">Suu &amp; Hammas -klinikan</span> hammaslääkärit vastaamme yleensä muutamassa tunnissa.</p>
+    <ul class="hero-points">
+      <li><strong>Vältät turhan käynnin.</strong> Moni hammasvaiva selviää ilman vastaanottoa, joten säästät aikaa ja rahaa.</li>
+      <li><strong>Tiedät, mitä hoitoa tarvitset.</strong> Kerromme, vaatiiko vaiva hoitoa, kuinka kiireellisesti ja millaisia hoitovaihtoehtoja on.</li>
+      <li><strong>E-resepti tarvittaessa.</strong> Kirjoitamme reseptin tai lausunnon vakuutusyhtiölle ilman vastaanottokäyntiä.</li>
+    </ul>
     <p class="hero-price"><strong>35 €</strong> / arvio · Sovelluksen lataaminen on maksutonta</p>
 
     <div class="hero-actions">
