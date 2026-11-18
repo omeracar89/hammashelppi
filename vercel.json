@@ -1,4 +1,10 @@
 {
   "outputDirectory": ".",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/hammashelppi_blogit", "destination": "/#blogi", "permanent": true },
+    { "source": "/hammashelppi_blogit.html", "destination": "/#blogi", "permanent": true },
+    { "source": "/hammassarky-yolla", "destination": "/blogi-1", "permanent": true },
+    { "source": "/hammassarky-yolla.html", "destination": "/blogi-1", "permanent": true }
+  ]
 }
